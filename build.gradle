@@ -4,8 +4,14 @@ plugins {
 
 task processMarkdown(type: Copy) {
     into "$buildDir/generatedContent/content"
-    from 'src/site/markdown'
-    include '**/*.md'
+    from 'src/site/markdown', {
+        include '**/*.md'
+    }
+    from 'src/site/markdown', {
+        include '**/*.md.vm'
+        rename { it - '.vm' }
+        expand project.properties
+    }
 }
 
 assemble {
