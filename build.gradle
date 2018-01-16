@@ -2,6 +2,36 @@ plugins {
     id 'base'
 }
 
+ext {
+    pageTitles = [
+            "documentation/history.md"          : "History",
+            "download/index.md"                 : "Download",
+            "download/releasenotes-3.0.0.md"    : "Release Notes",
+            "download/releasenotes-3.0.1.md"    : "Release Notes",
+            "download/releasenotes-3.0.2.md"    : "Release Notes",
+            "download/releasenotes-3.0.3.md"    : "Release Notes",
+            "download/releasenotes-3.1-beta1.md": "Release Notes",
+            "download/releasenotes-3.1-beta2.md": "Release Notes",
+            "download/releasenotes-3.1.0.md"    : "Release Notes",
+            "download/releasenotes-3.5.0.md"    : "Release Notes",
+            "download/releasenotes-3.6.0.md"    : "Release Notes",
+            "download/releasenotes-4.0-beta.md" : "Release Notes",
+            "download/releasenotes-4.0.0.md"    : "Release Notes",
+            "download/releasenotes-4.1.0.md"    : "Release Notes",
+            "download/releasenotes-4.1.1.md"    : "Release Notes",
+            "download/releasenotes-4.2.0.md"    : "Release Notes",
+            "download/releasenotes-4.3.0.md"    : "Release Notes",
+            "download/releasenotes-4.3.1.md"    : "Release Notes",
+            "download/releasenotes-5.0.md"      : "Release Notes",
+            "download/releasenotes-5.1.1.md"    : "Release Notes",
+            "download/releasenotes-5.1.2.md"    : "Release Notes",
+            "download/releasenotes-5.1.md"      : "Release Notes",
+            "download/releasenotes-5.2.md"      : "Release Notes",
+            "index.md"                          : "MaryTTS",
+            untitled                            : 'No Title'
+    ]
+}
+
 task processMarkdown(type: Copy) {
     into "$buildDir/generatedContent/content"
     from 'src/site/markdown', {
