@@ -32,6 +32,10 @@ ext {
     ]
 }
 
+task generatePageTitles(type: GeneratePageTitles) {
+    destDir = file("$buildDir/generatedPageTitles")
+}
+
 task processMarkdown(type: Copy) {
     into "$buildDir/generatedContent/content"
     from 'src/site/markdown', {
@@ -46,4 +50,24 @@ task processMarkdown(type: Copy) {
 
 assemble {
     dependsOn processMarkdown
+}
+
+class GeneratePageTitles extends DefaultTask {
+
+    @OutputDirectory
+    File destDir
+
+    @TaskAction
+    void generate() {
+        project.pageTitles.each { mdFile, title ->
+            def destPath = project.file("$destDir/$mdFile")
+            destPath.parentFile.mkdirs()
+            project.file("${destPath}.txt").withWriter { writer ->
+                writer.println "title=$title"
+                writer.println "type=page"
+                writer.println "status=published"
+                writer.println "~~~~~~"
+            }
+        }
+    }
 }
