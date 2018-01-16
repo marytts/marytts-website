@@ -37,14 +37,25 @@ task generatePageTitles(type: GeneratePageTitles) {
 }
 
 task processMarkdown(type: Copy) {
+    dependsOn generatePageTitles
     into "$buildDir/generatedContent/content"
     from 'src/site/markdown', {
         include '**/*.md'
+        eachFile {
+            def headerFile = file("$generatePageTitles.destDir/${it.path}.txt")
+            headerFile = headerFile.exists() ? headerFile : file("$generatePageTitles.destDir/untitled.txt")
+            filter org.apache.tools.ant.filters.ConcatFilter, prepend: headerFile
+        }
     }
     from 'src/site/markdown', {
         include '**/*.md.vm'
         rename { it - '.vm' }
         expand project.properties
+        eachFile {
+            def headerFile = file("$generatePageTitles.destDir/${it.path}.txt")
+            headerFile = headerFile.exists() ? headerFile : file("$generatePageTitles.destDir/untitled.txt")
+            filter org.apache.tools.ant.filters.ConcatFilter, prepend: headerFile
+        }
     }
 }
 
