@@ -1,5 +1,5 @@
 plugins {
-    id 'base'
+    id "org.jbake.site" version "1.0.0"
 }
 
 ext {
@@ -30,6 +30,12 @@ ext {
             "index.md"                          : "MaryTTS",
             untitled                            : 'No Title'
     ]
+}
+
+jbake {
+    srcDirName = relativePath("$buildDir/generatedContent")
+    destDirName = 'site'
+    configuration['render.feed'] = false
 }
 
 task generatePageTitles(type: GeneratePageTitles) {
