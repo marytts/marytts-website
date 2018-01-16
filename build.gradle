@@ -1,0 +1,13 @@
+plugins {
+    id 'base'
+}
+
+task processMarkdown(type: Copy) {
+    into "$buildDir/generatedContent/content"
+    from 'src/site/markdown'
+    include '**/*.md'
+}
+
+assemble {
+    dependsOn processMarkdown
+}
