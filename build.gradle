@@ -59,8 +59,18 @@ task processMarkdown(type: Copy) {
     }
 }
 
+task processAssets(type: Copy) {
+    from 'src/site/assets'
+    into "$buildDir/generatedContent/assets"
+}
+
+task processTemplates(type: Copy) {
+    from 'src/site/templates'
+    into "$buildDir/generatedContent/templates"
+}
+
 assemble {
-    dependsOn processMarkdown
+    dependsOn processMarkdown, processAssets, processTemplates
 }
 
 class GeneratePageTitles extends DefaultTask {
