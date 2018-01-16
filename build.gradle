@@ -75,8 +75,12 @@ task processTemplates(type: Copy) {
     into "$buildDir/generatedContent/templates"
 }
 
-assemble {
+bake {
     dependsOn processMarkdown, processAssets, processTemplates
+}
+
+assemble {
+    dependsOn bake
 }
 
 class GeneratePageTitles extends DefaultTask {
