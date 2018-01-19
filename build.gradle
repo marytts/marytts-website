@@ -2,8 +2,6 @@ plugins {
     id 'org.jbake.site' version '1.0.0'
 }
 
-apply plugin: 'java'
-
 ext {
     pageTitles = [
             "documentation/history.md"          : "History",
@@ -46,8 +44,12 @@ repositories {
     }
 }
 
+configurations {
+    javadoc
+}
+
 dependencies {
-    compile(group: 'de.dfki.mary', name: 'marytts', version: '5.2', classifier: 'javadoc')
+    javadoc group: 'de.dfki.mary', name: 'marytts', version: '5.2', classifier: 'javadoc'
 }
 
 jbake {
@@ -94,7 +96,7 @@ task processTemplates(type: Copy) {
 }
 
 task copyJavadocs(type: Copy) {
-    from configurations.getByName('compile').files
+    from configurations.getByName('javadoc').files
     into "$projectDir/src/content/javadocs"
 }
 
