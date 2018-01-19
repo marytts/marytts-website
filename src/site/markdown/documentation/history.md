@@ -1,18 +1,15 @@
-Project History
-===============
-
-The earliest version of ${project.name} was developed around ${project.inceptionYear} by Marc Schröder as a collaborative project of [DFKI](http://www.dfki.de/web)'s [Language Technology Lab](http://www.dfki.de/lt/) and the [Institute of Phonetics](http://www.coli.uni-saarland.de/groups/WB/Phonetics/) at [Saarland University](http://www.uni-saarland.de).
+The earliest version of MaryTTS was developed around 2000 by Marc Schröder as a collaborative project of [DFKI](http://www.dfki.de/web)'s [Language Technology Lab](http://www.dfki.de/lt/) and the [Institute of Phonetics](http://www.coli.uni-saarland.de/groups/WB/Phonetics/) at [Saarland University](http://www.uni-saarland.de).
 For many years, it evolved and matured, first as an in-house Text-to-Speech (TTS) component, and subsequently as a fully open-source TTS platform with a growing community.
-Since its origins, ${project.name} has changed significantly, but it remains true to its original goal:
+Since its origins, MaryTTS has changed significantly, but it remains true to its original goal:
 a <i><b>M</b>odular <b>A</b>rchitecture for <b>R</b>esearch in s<b>Y</b>ynthesis</i> written in Java.
 
-The history of ${project.name} can be largely broken down into several phases:
+The history of MaryTTS can be largely broken down into several phases:
 
 Pre-History
 -----------
 
-Marc and the other early developers have all moved on to other institutions and projects, so little is known about the earliest days of ${project.name}.
-DFKI wanted to develop its own in-house solution for TTS, and the earliest incarnation of what was to become ${project.name} consisted of a collection of shell scripts piping data to each other.
+Marc and the other early developers have all moved on to other institutions and projects, so little is known about the earliest days of MaryTTS.
+DFKI wanted to develop its own in-house solution for TTS, and the earliest incarnation of what was to become MaryTTS consisted of a collection of shell scripts piping data to each other.
 When Marc joined DFKI, he realized that to create a sustainable and extensible TTS platform, it needed to be redesigned and implemented in an object-oriented way.
 The decision was made in favor of Java (over C++), since platform portability was an important criterion.
 
@@ -34,11 +31,11 @@ OpenMARY (2009-2011)
 
 The internal DFKI MARY was effectively discontinued as development efforts focused on OpenMARY.
 Additional funding was granted by the EU project [SEMAINE](http://www.semaine-project.eu/), which integrated MARY into a multimodal, spoken dialog system with expressive virtual characters.
-Along with the final year of the PAVOQUE project and collaboration in another EU project ([SSPNET](http://sspnet.eu/)), this phase marked extensive development on ${project.name}.
+Along with the final year of the PAVOQUE project and collaboration in another EU project ([SSPNET](http://sspnet.eu/)), this phase marked extensive development on MaryTTS.
 In 2011, the development was migrated to GitHub, and [Apache Maven](http://maven.apache.org/) replaced Ant as the build management tool.
 
 MaryTTS (2012-present)
 ----------------------
 
-A number of departures resulted in the DFKI Speech Group led by Marc Schröder closing down, with the new Multimodal Speech Processing group led by Ingmar Steiner taking over the ${project.name} project.
-Development on ${project.name} is currently primarily funded through research grants from the DFG, in particular the [Cluster of Excellence *Multimodal Computing and Interaction* (MMCI)](http://m2ci.org/) and the [Collaborative Research Center SFB-1102](http://www.sfb1102.uni-saarland.de/).
+A number of departures resulted in the DFKI Speech Group led by Marc Schröder closing down, with the new Multimodal Speech Processing group led by Ingmar Steiner taking over the MaryTTS project.
+Development on MaryTTS is currently primarily funded through research grants from the DFG, in particular the [Cluster of Excellence *Multimodal Computing and Interaction* (MMCI)](http://m2ci.org/) and the [Collaborative Research Center SFB-1102](http://www.sfb1102.uni-saarland.de/).

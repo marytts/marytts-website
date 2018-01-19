@@ -3,7 +3,7 @@
 <#list published_content as content>
     <url>
         <loc>${config.site_host}/${content.uri}</loc>
-        <lastmod>${content.date?string("yyyy-MM-dd")}</lastmod>
+        <lastmod>${.now?string("yyyy-MM-dd")}</lastmod>
     </url>
 </#list>
 </urlset>

@@ -1,9 +1,4 @@
-title=Publications
-type=page
-status=published
-~~~~~~
-
-# Publications related to the MARY TTS system
+## Publications related to the MARY TTS system
 
 You can find a somewhat detailed description of the MARY system and its use for Research, Teaching and Development in the following paper:
 

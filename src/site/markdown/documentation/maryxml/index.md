@@ -1,8 +1,3 @@
-title=MaryXML
-type=page
-status=published
-~~~~~~
-
 # Introduction
 
 The MARY system uses an internal XML-based representation language called MaryXML. The purpose of an XML-based representation language is to serve as the data representation format inside a TTS system. For that reason, the concepts represented in it are low-level, detailed, and specific to the design decisions, modules, and scientific theories underlying the TTS system. By means of the Document Object Model (DOM), a standardised object-oriented representation of an XML document, the TTS system modules can operate directly on the XML document, interpreting and adding information.

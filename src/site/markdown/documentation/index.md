@@ -1,8 +1,3 @@
-title=Documentation
-type=page
-status=published
-~~~~~~
-
 Start here if you want to understand what MARY is doing and how you can use it
       
       

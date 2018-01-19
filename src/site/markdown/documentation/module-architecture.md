@@ -1,8 +1,3 @@
-title=Architecture Walkthrough
-type=page
-status=published
-~~~~~~
-
 The following figure gives details of the processing architecture within MARY, exemplified according to the German system. The processing architecture for other languages is similar.
 
 * Click on an item in order to obtain information about it.
