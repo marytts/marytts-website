@@ -1,6 +1,8 @@
 plugins {
-    id "org.jbake.site" version "1.0.0"
+    id 'org.jbake.site' version '1.0.0'
 }
+
+apply plugin: 'java'
 
 ext {
     pageTitles = [
@@ -30,6 +32,22 @@ ext {
             "index.md"                          : "MaryTTS",
             untitled                            : 'No Title'
     ]
+}
+
+repositories {
+    ['cloudark', 'localhost'].each { host ->
+        maven {
+            url "http://$host:8081/artifactory/local/"
+            credentials {
+                username findProperty('cloudarkUser')
+                password findProperty('cloudarkApiKey')
+            }
+        }
+    }
+}
+
+dependencies {
+    compile(group: 'de.dfki.mary', name: 'marytts', version: '5.2', classifier: 'javadoc')
 }
 
 jbake {
@@ -75,8 +93,13 @@ task processTemplates(type: Copy) {
     into "$buildDir/generatedContent/templates"
 }
 
+task copyJavadocs(type: Copy) {
+    from configurations.getByName('compile').files
+    into "$projectDir/src/content/javadocs"
+}
+
 bake {
-    dependsOn processMarkdown, processAssets, processTemplates
+    dependsOn processMarkdown, processAssets, processTemplates, copyJavadocs
 }
 
 assemble {
