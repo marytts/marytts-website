@@ -96,8 +96,15 @@ task processTemplates(type: Copy) {
 }
 
 task copyJavadocs(type: Copy) {
-    from configurations.getByName('javadoc').files
-    into "$projectDir/src/content/javadocs"
+    from configurations.javadoc
+    into "$buildDir/javadoc"
+    filesMatching '*.jar', { jarFileDetails ->
+        copy {
+            from zipTree(jarFileDetails.file)
+            into destinationDir
+        }
+        jarFileDetails.exclude()
+    }
 }
 
 bake {
