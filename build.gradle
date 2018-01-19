@@ -1,0 +1,36 @@
+plugins {
+    id 'org.jbake.site' version '1.0.0'
+}
+
+apply plugin:'java'
+
+jbake {
+    version = '2.5.1'
+    srcDirName = 'src'
+    destDirName = 'output'
+}
+
+repositories {
+    ['cloudark', 'localhost'].each { host ->
+        maven {
+            credentials {
+                username findProperty('cloudarkUser')
+                password findProperty('cloudarkApiKey')
+            }
+            url "http://$host:8081/artifactory/local/"
+        }
+    }
+}
+
+dependencies {
+    compile(group: 'de.dfki.mary', name: 'marytts', version: '5.2', classifier: 'javadoc')
+}
+
+task copyJavadocs (type: Copy) {
+    from configurations.getByName('compile').files
+    into "$projectDir/src/content/javadocs"
+}
+
+bake {
+    dependsOn copyJavadocs
+}
