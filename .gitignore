@@ -1,0 +1,12 @@
+# Gradle
+.gradle/
+build/
+
+# OSX
+.DS_Store
+
+src/content/javadocs
+
+# IDEA
+.idea/
+*.iml
