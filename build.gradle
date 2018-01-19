@@ -88,6 +88,15 @@ task processMarkdown(type: Copy) {
 task processAssets(type: Copy) {
     from 'src/site/assets'
     into "$buildDir/generatedContent/assets"
+    from configurations.javadoc, {
+        filesMatching '*.jar', { jarFileDetails ->
+            copy {
+                from zipTree(jarFileDetails.file)
+                into "$destinationDir/javadoc"
+            }
+            jarFileDetails.exclude()
+        }
+    }
 }
 
 task processTemplates(type: Copy) {
@@ -95,20 +104,8 @@ task processTemplates(type: Copy) {
     into "$buildDir/generatedContent/templates"
 }
 
-task copyJavadocs(type: Copy) {
-    from configurations.javadoc
-    into "$buildDir/javadoc"
-    filesMatching '*.jar', { jarFileDetails ->
-        copy {
-            from zipTree(jarFileDetails.file)
-            into destinationDir
-        }
-        jarFileDetails.exclude()
-    }
-}
-
 bake {
-    dependsOn processMarkdown, processAssets, processTemplates, copyJavadocs
+    dependsOn processMarkdown, processAssets, processTemplates
 }
 
 assemble {
