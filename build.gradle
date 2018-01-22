@@ -1,41 +1,71 @@
 plugins {
-    id "org.jbake.site" version "1.0.0"
+    id 'org.jbake.site' version '1.0.0'
 }
 
 ext {
     pageTitles = [
-            "documentation/history.md"          : "History",
-            "download/index.md"                 : "Download",
-            "download/releasenotes-3.0.0.md"    : "Release Notes",
-            "download/releasenotes-3.0.1.md"    : "Release Notes",
-            "download/releasenotes-3.0.2.md"    : "Release Notes",
-            "download/releasenotes-3.0.3.md"    : "Release Notes",
-            "download/releasenotes-3.1-beta1.md": "Release Notes",
-            "download/releasenotes-3.1-beta2.md": "Release Notes",
-            "download/releasenotes-3.1.0.md"    : "Release Notes",
-            "download/releasenotes-3.5.0.md"    : "Release Notes",
-            "download/releasenotes-3.6.0.md"    : "Release Notes",
-            "download/releasenotes-4.0-beta.md" : "Release Notes",
-            "download/releasenotes-4.0.0.md"    : "Release Notes",
-            "download/releasenotes-4.1.0.md"    : "Release Notes",
-            "download/releasenotes-4.1.1.md"    : "Release Notes",
-            "download/releasenotes-4.2.0.md"    : "Release Notes",
-            "download/releasenotes-4.3.0.md"    : "Release Notes",
-            "download/releasenotes-4.3.1.md"    : "Release Notes",
-            "download/releasenotes-5.0.md"      : "Release Notes",
-            "download/releasenotes-5.1.1.md"    : "Release Notes",
-            "download/releasenotes-5.1.2.md"    : "Release Notes",
-            "download/releasenotes-5.1.md"      : "Release Notes",
-            "download/releasenotes-5.2.md"      : "Release Notes",
-            "index.md"                          : "MaryTTS",
-            untitled                            : 'No Title'
+            "index.md"                            : "MaryTTS",
+            "documentation/history.md"            : "Project History",
+            "documentation/index.md"              : "Documentation",
+            "documentation/maryxml/index.md"      : "MaryXML",
+            "documentation/module-architecture.md": "Architecture Walkthrough",
+            "documentation/publications/index.md" : "Publications",
+            "download/index.md"                   : "Download",
+            "download/releasenotes-3.0.0.md"      : "Release Notes",
+            "download/releasenotes-3.0.1.md"      : "Release Notes",
+            "download/releasenotes-3.0.2.md"      : "Release Notes",
+            "download/releasenotes-3.0.3.md"      : "Release Notes",
+            "download/releasenotes-3.1-beta1.md"  : "Release Notes",
+            "download/releasenotes-3.1-beta2.md"  : "Release Notes",
+            "download/releasenotes-3.1.0.md"      : "Release Notes",
+            "download/releasenotes-3.5.0.md"      : "Release Notes",
+            "download/releasenotes-3.6.0.md"      : "Release Notes",
+            "download/releasenotes-4.0-beta.md"   : "Release Notes",
+            "download/releasenotes-4.0.0.md"      : "Release Notes",
+            "download/releasenotes-4.1.0.md"      : "Release Notes",
+            "download/releasenotes-4.1.1.md"      : "Release Notes",
+            "download/releasenotes-4.2.0.md"      : "Release Notes",
+            "download/releasenotes-4.3.0.md"      : "Release Notes",
+            "download/releasenotes-4.3.1.md"      : "Release Notes",
+            "download/releasenotes-5.0.md"        : "Release Notes",
+            "download/releasenotes-5.1.1.md"      : "Release Notes",
+            "download/releasenotes-5.1.2.md"      : "Release Notes",
+            "download/releasenotes-5.1.md"        : "Release Notes",
+            "download/releasenotes-5.2.md"        : "Release Notes",
+            untitled                              : 'No Title'
     ]
+}
+
+repositories {
+    ['cloudark', 'localhost'].each { host ->
+        maven {
+            url "http://$host:8081/artifactory/local/"
+            credentials {
+                username findProperty('cloudarkUser')
+                password findProperty('cloudarkApiKey')
+            }
+        }
+    }
+}
+
+configurations {
+    javadoc
+}
+
+dependencies {
+    javadoc group: 'de.dfki.mary', name: 'marytts', version: '5.2', classifier: 'javadoc'
 }
 
 jbake {
     srcDirName = relativePath("$buildDir/generatedContent")
     destDirName = 'site'
+    configuration['site.host'] = 'http://marytts.github.io/'
+    configuration['render.tags'] = false
+    configuration['render.index'] = false
+    configuration['render.sitemap'] = true
     configuration['render.feed'] = false
+    configuration['render.archive'] = false
+    configuration['markdown.extensions'] = 'ALL'
 }
 
 task generatePageTitles(type: GeneratePageTitles) {
@@ -68,6 +98,15 @@ task processMarkdown(type: Copy) {
 task processAssets(type: Copy) {
     from 'src/site/assets'
     into "$buildDir/generatedContent/assets"
+    from configurations.javadoc, {
+        filesMatching '*.jar', { jarFileDetails ->
+            copy {
+                from zipTree(jarFileDetails.file)
+                into "$destinationDir/javadoc"
+            }
+            jarFileDetails.exclude()
+        }
+    }
 }
 
 task processTemplates(type: Copy) {
