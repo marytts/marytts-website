@@ -26,6 +26,14 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" href="#">Generated Reports<b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc">JavaDocs</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
