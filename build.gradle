@@ -10,6 +10,7 @@ ext {
             "documentation/maryxml/index.md"      : "MaryXML",
             "documentation/module-architecture.md": "Architecture Walkthrough",
             "documentation/publications/index.md" : "Publications",
+            "faq.md"                              : "Frequently Asked Questions",
             "download/index.md"                   : "Download",
             "download/releasenotes-3.0.0.md"      : "Release Notes",
             "download/releasenotes-3.0.1.md"      : "Release Notes",
