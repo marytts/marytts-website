@@ -29,6 +29,8 @@
                         </ul>
                     <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>faq.html">FAQ</a></li>
                     </li>
+                    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>legal-information.html">Legal Information</a></li>
+                    </li>
                     <li class="dropdown">
                         <a data-toggle="dropdown" href="#">Generated Reports<b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu">
