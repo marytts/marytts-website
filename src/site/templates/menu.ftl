@@ -18,6 +18,8 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/index.html">Documentation</a>
                             </li>
+                            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/overview.html">Overview</a>
+                            </li>
                             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/history.html">History</a>
                             </li>
                             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/maryxml/index.html">MaryXML</a>

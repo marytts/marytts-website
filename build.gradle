@@ -5,6 +5,7 @@ plugins {
 ext {
     pageTitles = [
             "index.md"                            : "MaryTTS",
+            "documentation/overview.md"              : "Overview",
             "documentation/history.md"            : "Project History",
             "documentation/index.md"              : "Documentation",
             "documentation/maryxml/index.md"      : "MaryXML",
