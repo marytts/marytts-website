@@ -24,6 +24,8 @@
                             </li>
                             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/maryxml/index.html">MaryXML</a>
                             </li>
+                            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/tibetan.html">Tibetan</a>
+                            </li>
                             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/publications/index.html">Publications</a>
                             </li>
                             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/module-architecture.html">Architecture Walkthrough</a>
