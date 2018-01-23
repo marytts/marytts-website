@@ -13,6 +13,7 @@ ext {
             "documentation/module-architecture.md": "Architecture Walkthrough",
             "documentation/publications/index.md" : "Publications",
             "faq.md"                              : "Frequently Asked Questions",
+            "documentation/pavoque/index.md"      : "PAVOQUE Project",
             "legal-information.md"                : "Legal Information",
             "download/index.md"                   : "Download",
             "download/releasenotes-3.0.0.md"      : "Release Notes",
