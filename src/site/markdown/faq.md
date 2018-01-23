@@ -35,11 +35,11 @@ We like to use MaryTTS to refer to the project as it exists now, but for brevity
 ####<a name="tech1"></a>Can I get MP3 output from MaryTTS (or another compressed audio format)?
 
 Unfortunately, no. 
-MARY 3.x did support MP3 output by depending on the Tritonus library. 
+MARY 3.x did support MP3 output by depending on the [Tritonus](http://tritonus.org/) library. 
 However, the native (i.e., non-Java) components became increasingly problematic to support, and were dropped in MARY TTS 4.0. 
 
 The Java world is not particularly well-endowed with open-source implementations of popular audio codecs. 
-While it might be possible to support a few formats (such as Speex), it's not one of the next milestones. 
+While it might be possible to support a few formats (such as [Speex](https://www.speex.org/)), it's not one of the next milestones. 
 However, code contributions are always welcome.
 
 [\[top\]](#top)
