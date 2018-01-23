@@ -3,8 +3,8 @@ The following figure gives details of the processing architecture within MARY, e
 * Click on an item in order to obtain information about it.
 	
 <div style="text-align:right;">
-  <a href="mary-architecture_v2.pdf">
-    <img alt="Mary Architecture" src="mary-architecture_v2.pdf" width="100%">
+  <a href="../images/mary_architecture_large.gif">
+    <img alt="Mary Architecture" src="../images/mary_architecture_large.gif" width="100%">
   </a>
 </div>
 
@@ -15,29 +15,29 @@ Plain text is the most basic, and maybe most common input format. Nothing is kno
 
 ## SABLE-annotated text
 	
-[SABLE](http://clas.mq.edu.au/speech/synthesis/sable/sable.html) is a markup language for annotating texts in view of speech synthesis, developed in the 1990's.\
+[SABLE](http://clas.mq.edu.au/speech/synthesis/sable/sable.html) is a markup language for annotating texts in view of speech synthesis, developed in the 1990's.  
 Speech synthesis markup languages are useful for providing information about the structure of a document, the meaning of numbers, or the importance of words, so that this information can be appropriately expressed in speech (such as pausing in the right places, pronouncing telephone numbers appropriately, or putting emphasis on the word carrying focus). Such information may be provided by a human user or, more likely, by other processing units such as natural language generators, email processors, or HTML readers.
 
 ### SABLE parser
 
-As both [SABLE](http://clas.mq.edu.au/speech/synthesis/sable/sable.html) and [MaryXML](maryxml.html) markup are XML-conform markup languages, an [XSLT Stylesheet Transformation](https://www.w3schools.com/xml/xsl_transformation.asp) is used to transform SABLE into MaryXML.\
+As both [SABLE](http://clas.mq.edu.au/speech/synthesis/sable/sable.html) and [MaryXML](maryxml.html) markup are XML-conform markup languages, an [XSLT Stylesheet Transformation](https://www.w3schools.com/xml/xsl_transformation.asp) is used to transform SABLE into MaryXML.  
 The benefit of this method lies in the fact that in order to parse a different markup language, all that needs to be done is writing a new stylesheet for the translation into MaryXML.
 
 
 ## SSML-annotated text
 
-[SSML](https://www.w3.org/TR/speech-synthesis/) is a markup language for annotating texts in view of speech synthesis. It was proposed by the W3C as a standard.\
+[SSML](https://www.w3.org/TR/speech-synthesis/) is a markup language for annotating texts in view of speech synthesis. It was proposed by the W3C as a standard.  
 Speech synthesis markup languages are useful for providing information about the structure of a document, the meaning of numbers, or the importance of words, so that this information can be appropriately expressed in speech (such as pausing in the right places, pronouncing telephone numbers appropriately, or putting emphasis on the word carrying focus). Such information may be provided by a human user or, more likely, by other processing units such as natural language generators, email processors, or HTML readers.	
 
 ### SSML parser
 
-[SSML](https://www.w3.org/TR/speech-synthesis/)  and  [MaryXML](maryxml.html) markup are XML-conform markup languages, an [XSLT Stylesheet Transformation](https://www.w3schools.com/xml/xsl_transformation.asp) is used to transform SSML into MaryXML.\
+[SSML](https://www.w3.org/TR/speech-synthesis/)  and  [MaryXML](maryxml.html) markup are XML-conform markup languages, an [XSLT Stylesheet Transformation](https://www.w3schools.com/xml/xsl_transformation.asp) is used to transform SSML into MaryXML.  
 The benefit of this method lies in the fact that in order to parse a different markup language, all that needs to be done is writing a new stylesheet for the translation into MaryXML.
 
 
 ## MaryXML markup
 
-MaryXML is an internal, relatively low-level markup which reflects the modelling capabilities of this particular TtS system. MaryXML is based on XML. A [MaryXML Schema](MaryXML.xsd) formally specifies the structure of a correct MaryXML document. (This first MaryXML skeleton, before tokenisation, is not required to comply to the MaryXML Schema which assumes text data to be tokenised. All subsequent intermediate MaryXML results (module outputs) do comply to the MaryXML Schema.\
+MaryXML is an internal, relatively low-level markup which reflects the modelling capabilities of this particular TtS system. MaryXML is based on XML. A [MaryXML Schema](../MaryXML.xsd) formally specifies the structure of a correct MaryXML document. (This first MaryXML skeleton, before tokenisation, is not required to comply to the MaryXML Schema which assumes text data to be tokenised. All subsequent intermediate MaryXML results (module outputs) do comply to the MaryXML Schema.  
 Through subsequent processing modules, the MaryXML structure is enriched. If a module finds the type of information it is supposed to add already present, that information is given piority. This means that the realisation indications expressed in the input markup (e.g., [SABLE](#sable-annotated-text), [SSML](#ssml-annotated-text)) are considered as supplements to the modules' text-to-speech analysis of the input.
 For example, if the prosody module does not get information from its input on the locations and types of accents and boundaries, it will use its default rules to determine them. If it finds partial information in its input, such as the location, but not the type of an accent, it will apply its rules to fill in the missing piece of information.
 
@@ -52,7 +52,7 @@ In the preprocessing module, those tokens for which the spoken form does not ent
 ### Numbers
 
 The pronunciation of numbers highly depends on their meaning. 
-Different number types, such as cardinal and ordinal numbers, currency amounts, or telephone numbers, must be identified as such, either from input markup or from context, and replaced by appropriate token strings.\
+Different number types, such as cardinal and ordinal numbers, currency amounts, or telephone numbers, must be identified as such, either from input markup or from context, and replaced by appropriate token strings.  
 While the expansion of cardinal numbers is straightforward, the expansion of ordinal numbers poses interesting problems in German, because of their inflections. 
 On the one hand, the expansion of an ordinal number depends on its part-of-speech (adverb or adjective); on the other hand, for adjective ordinals, the inflection ending depends on gender, number and case of the noun phrase the ordinal belongs to. 
 In the preprocessing module, none of that information is available, so the ordinal number is simply marked as such, and a stem expansion is given. 
@@ -63,7 +63,7 @@ Based on this markup, the correct ending will be selected during phonemisation (
 ### Abbreviations
 
 Two main groups of abbreviations are distinguished: Those that are spelled out, such as "USA", and those that need expansion. 
-The first group of appreviations are correctly pronounced by spelling rules.\
+The first group of appreviations are correctly pronounced by spelling rules.  
 The second group is pronounced using an expansion table, containing a graphemic and optionally a phonemic expansion. 
 The latter is expecially useful for foreign abbreviations, such as "FBI" which is pronounced as the English spelling [Ef-bi:-'?aI] in German.
 
@@ -75,7 +75,7 @@ For more information about the problems of text normalisation in German, see [Br
 ## Part-of-speech tagger and chunker
 
 Part-of-speech tagging is performed with the statistical tagger [TnT](http://www.coli.uni-sb.de/%7Ethorsten/tnt), using the [Stuttgart-Tübingen Tagset (STTS)](http://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-table.html), and trained on the manually annotated [NEGRA corpus](http://www.coli.uni-saarland.de/projects/sfb378/negra-corpus/negra-corpus.html). 
-A [chunk parser](http://www.coli.uni-saarland.de/publikationen/softcopies/Skut:1998:CTS.pdf) is used to determine the boundaries of noun phrases, prepositional phrases and adjective phrases.\
+A [chunk parser](http://www.coli.uni-saarland.de/publikationen/softcopies/Skut:1998:CTS.pdf) is used to determine the boundaries of noun phrases, prepositional phrases and adjective phrases.  
 Part-of-speech and chunking information is added to each token's <<<< t > >>> tag. 
 For the chunking information, this is not actually a very satisfactory solution, as the local syntactic structure can hardly be considered a property of the individual token. 
 However, the more logical representation of syntactic structure as an XML tree structure would possibly conflict with the prosodic structure, due to the fact that syntactic and prosodic structure cannot be guaranteed to coincide in all cases. 
@@ -111,7 +111,7 @@ For all parts of a compound except the first, primary word stress is reduced to 
 	
 ## Letter-to-sound conversion
 
-Unknown words that cannot be phonemised with the help of the lexicon are analysed by a "letter-to-sound conversion" algorithm.\
+Unknown words that cannot be phonemised with the help of the lexicon are analysed by a "letter-to-sound conversion" algorithm.  
 Letter-to-sound rules are statistically trained on the MARY lexicon, following the algorithm proposed by Alan Black et al.
 
 The syllabification of the transcribed words is based on standard phonological principles such as the sonority hierarchy of phonemes, the maximal onset principle, the obligatory coda principle and the phonotactic restrictions for the German language.
@@ -130,7 +130,7 @@ The output of the phonemisation component contains the phonemic transcription (u
 Prosody is modelled using [GToBI](http://www.gtobi.uni-koeln.de/), an adaptation of ToBI ("Tones and Break Indices") for German. 
 ToBI describes intonation in terms of fundamental frequency (F0) target points, distinguishing between accents associated with prominent words and boundary tones associated with the end of a phrase. 
 The size of a phrase break is encoded in break indices. 
-Within Mary, break indices are used as follows: "2" is a potential boundary location (which might be "stepped up" and thus realised by some phonological process later on); "3" denotes an intermediate phrase break; "4" is used for intra-sentential phrase breaks; "5" and "6" (not part of GToBI) represent sentence-final and paragraph-final boundaries.\
+Within Mary, break indices are used as follows: "2" is a potential boundary location (which might be "stepped up" and thus realised by some phonological process later on); "3" denotes an intermediate phrase break; "4" is used for intra-sentential phrase breaks; "5" and "6" (not part of GToBI) represent sentence-final and paragraph-final boundaries.  
 The prosody rules module assigns the symbolic GToBI labels. 
 In a later step (see [Calculation of acoustic parameters](#calculation-of-acoustic-parameters)), these are translated into concrete F0 targets and pause durations.
 
@@ -172,14 +172,14 @@ Obviously, the actual frequency values of the topline and baseline need to be se
 
 ## Phone segment and acoustic parameter list: MBROLA input
 
-The output produced by the calculation of acoustic parameters module is a maximal MaryXML structure, which can be used e.g. to derive timing information for synchronizing speech with taking heads and embodied conversational agents.\
+The output produced by the calculation of acoustic parameters module is a maximal MaryXML structure, which can be used e.g. to derive timing information for synchronizing speech with taking heads and embodied conversational agents.  
 The structure can also be reduced to more simple synthesizer input, e.g. a list containing the individual segments with their durations as well as F0 targets, a format compatible with the MBROLA .pho input files.
 
 
 ## Synthesis module
 
 Among others, [MBROLA](http://tcts.fpms.ac.be/synthesis/mbrola.html) is used for synthesising the utterance based on the output of the preceding module. 
-Several diphone sets for a number of male and female voices can be used.\
+Several diphone sets for a number of male and female voices can be used.  
 MARY also contains basic unit selection code, based on the cluster unit selection code taken from [FreeTTS](http://freetts.sf.net).
 
 
