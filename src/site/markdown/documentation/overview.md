@@ -39,7 +39,7 @@ The NLP analysis is organised in a modular way, containing the following compone
 
 ### 2.2 Output
 
-The output of the NLP component is a rich MaryXML structure. (For its syntax, see [MaryXML.xsd](MaryXML.xsd)). Example:
+The output of the NLP component is a rich MaryXML structure. (For its syntax, see [MaryXML.xsd](../MaryXML.xsd)). Example:
 ```xml	
 <?xml version="1.0" encoding="UTF-8"?>
 <maryxml xmlns="${project.url}/2002/MaryXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.4" xml:lang="de">
