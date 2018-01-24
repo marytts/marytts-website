@@ -5,11 +5,16 @@ plugins {
 ext {
     pageTitles = [
             "index.md"                            : "MaryTTS",
+            "documentation/overview.md"           : "Overview",
+            "documentation/tibetan.md"            : "Tibetan",
             "documentation/history.md"            : "Project History",
             "documentation/index.md"              : "Documentation",
             "documentation/maryxml/index.md"      : "MaryXML",
             "documentation/module-architecture.md": "Architecture Walkthrough",
             "documentation/publications/index.md" : "Publications",
+            "faq.md"                              : "Frequently Asked Questions",
+            "documentation/pavoque/index.md"      : "PAVOQUE Project",
+            "legal-information.md"                : "Legal Information",
             "download/index.md"                   : "Download",
             "download/releasenotes-3.0.0.md"      : "Release Notes",
             "download/releasenotes-3.0.1.md"      : "Release Notes",
