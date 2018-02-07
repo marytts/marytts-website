@@ -29,5 +29,17 @@
     <link rel="shortcut icon" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>favicon.ico">
   </head>
   <body onload="prettyPrint()">
-    <div id="wrap">
+  <div class="header">
+      <a href="index.html">
+          <img src="images/marylogo.png"
+      </a>
+      <div id="content">
+          <a href="https://github.com/marytts/marytts">
+              <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" class="ribbon"/>
+          </a>
+      </div>
+  </div>
+
+
+
    
