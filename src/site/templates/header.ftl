@@ -31,7 +31,7 @@
   <body onload="prettyPrint()">
   <div class="header">
       <a href="index.html">
-          <img src="images/marylogo.png"
+          <img src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>images/marylogo.png"
       </a>
       <div id="content">
           <a href="https://github.com/marytts/marytts">
