@@ -2,7 +2,7 @@
 <div class="sidenav">
     <li class="dropdown-header">NAVIGATION</li>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">Introduction</a>
-    <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>http://mary.dfki.de:59125">Online Demo</a>
+    <a href="http://mary.dfki.de:59125">Online Demo</a>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>download/index.html">Download</a>
     <li class="dropdown">
         <a data-toggle="dropdown" href="#">Documentation<b class="caret"></b></a>
