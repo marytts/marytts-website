@@ -1,4 +1,3 @@
-<h2><a name="Project_Mailing_Lists"></a>Project Mailing Lists</h2><a name="Project_Mailing_Lists"></a>
 <p>These are the mailing lists that have been established for this project. For each list, there is a subscribe, unsubscribe, and an archive link.</p>
 <table border="0" class="table table-striped">
 <tr class="a">
