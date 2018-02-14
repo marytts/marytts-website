@@ -26,11 +26,9 @@
     <li class="dropdown">
         <a data-toggle="dropdown" href="#">Project Information<b class="caret"></b></a>
         <ul class="dropdown-menu" role="menu">
-            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/project-license.html">License</a>
+            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/index.html">Overview</a>
             <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/team.html">Team</a>
             <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/mail-lists.html">Mailing Lists</a>
-            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/issue-management.html">Issue Management</a>
-            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/source-code-management.html">Source Code Management</a>
         </ul>
     <li class="dropdown">
         <a data-toggle="dropdown" href="#">Generated Reports<b class="caret"></b></a>

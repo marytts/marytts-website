@@ -1,3 +1,4 @@
+# Source Code Management
 <p>This project uses <a class="externalLink" href="http://git-scm.com/">Git</a> to manage its source code. Instructions on Git use can be found at <a class="externalLink" href="http://git-scm.com/documentation">http://git-scm.com/documentation</a>.</p></div>
 
 <h2><a name="Web_Browser_Access"></a>Web Browser Access</h2><a name="Web_Browser_Access"></a>
@@ -17,3 +18,15 @@
                   </div>
             </div>
           </div>
+          
+# Issue Management
+<p>Issues, bugs, and feature requests should be submitted to the following issue management system for this project.</p>
+<div class="source"><pre class="prettyprint"><a class="externalLink" href="https://github.com/marytts/marytts/issues/">https://github.com/marytts/marytts/issues/</a></pre></div></div>
+                  </div>
+            </div>
+          </div>
+
+# Project License
+Typically the licenses listed for the project are that of the project itself, and not of dependencies.
+
+### **[GNU Lesser General Public License v3.0](https://www.gnu.org/licenses/lgpl-3.0-standalone.html)**          

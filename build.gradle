@@ -40,11 +40,9 @@ ext {
             "download/releasenotes-5.1.2.md"                       : "Release Notes",
             "download/releasenotes-5.1.md"                         : "Release Notes",
             "download/releasenotes-5.2.md"                         : "Release Notes",
-            "dev-doc/project-license.md"                           : "Licenses",
+            "dev-doc/index.md"                                     : "Overview",
             "dev-doc/mail-lists.md"                                : "Mailing Lists",
             "dev-doc/team.md"                                      : "Team",
-            "dev-doc/issue-management.md"                          : "Issue Management",
-            "dev-doc/source-code-management.md"                    : "Source Code Management",
             untitled                                               : 'No Title'
     ]
 }
