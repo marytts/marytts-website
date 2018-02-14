@@ -30,7 +30,7 @@
   </head>
   <body onload="prettyPrint()">
   <div class="header">
-      <a href="index.html">
+      <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">
           <img src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>images/marylogo.png"
       </a>
       <div id="content">
