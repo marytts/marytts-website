@@ -15,8 +15,9 @@
                 <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/publications/index.html">Publications</a>
                 <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/module-architecture.html">Architecture
                     Walkthrough</a>
-                <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/pavoque/index.html">PAVOQUE
+                <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/index.html">PAVOQUE
                     Project</a>
+                <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/publications/pavoque-publications.html">PAVOQUE Publications</a>
         </ul>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>faq.html">FAQ</a>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>legal-information.html">Legal

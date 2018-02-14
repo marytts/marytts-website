@@ -4,7 +4,7 @@ Information regarding the DFG-funded research project PAVOQUE: <i><b>PA</b>ramet
 
 # Project Publications
 	
-See the [PAVOQUE Publications page](pavoque-publications.html).
+See the [PAVOQUE Publications page](publications/pavoque-publications.html).
 
 # Abstract
 	
