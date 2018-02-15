@@ -18,9 +18,14 @@
         <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/publications/index.html">Publications</a>
         <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/module-architecture.html">Architecture
             Walkthrough</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/index.html">PAVOQUE
-            Project</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/publications/pavoque-publications.html">PAVOQUE Publications</a>
+        <button class="dropdown-btn">PAVOQUE Project
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/index.html">PAVOQUE
+                Project</a>
+            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/publications/pavoque-publications.html">PAVOQUE Publications</a>
+        </div>
     </div>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>faq.html">FAQ</a>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>legal-information.html">Legal
