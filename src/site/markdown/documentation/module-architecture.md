@@ -3,11 +3,10 @@ The following figure gives details of the processing architecture within MARY, e
 * Click on an item in order to obtain information about it.
 	
 <div style="text-align:center;">
-  <a href="../images/mary_architecture_large.gif">
-    <img alt="Mary Architecture" src="../images/mary_architecture_large.gif" width="50%">
+  <a href="../pdf/mary-architecture_v2.pdf">
+    <img alt="Mary Architecture" src="../images/mary-architecture_v2.jpg" width="50%">
   </a>
 </div>
-
 
 ##  Plain text
 
