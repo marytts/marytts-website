@@ -8,12 +8,12 @@ Most of the information to be represented in MaryXML, however, is too detailed t
 
 The MaryXML syntax was designed to maintain a certain degree of readability for the human user, by keeping information redundancy at a minimum.
 
-The syntax of a correct MaryXML document is defined in the [MaryXML schema file](insert site here).
+The syntax of a correct MaryXML document is defined in the [MaryXML schema file](../../MaryXML.xsd).
 
 # Examples
 
 MaryXML, when used as a rich input to a speech synthesis system, provides a powerful method for controlling the behaviour of the TTS system for the given input. It can be thought of as a "remote control" for the TTS system. 
-The input data below is to be fed into the system as data of type RAWMARYXML, e.g. via the [online demo](insert site here).
+The input data below is to be fed into the system as data of type RAWMARYXML, e.g. via the [online demo](http://mary.dfki.de:59125).
 
 **Note:** These examples refer to MaryXML version 0.5, as it is used since MARY TTS 4.0. In previous versions, some attribute names were different, e.g. the attribute name "sampa" was used instead of the current "ph".
 

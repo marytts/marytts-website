@@ -4,7 +4,7 @@ Information regarding the DFG-funded research project PAVOQUE: <i><b>PA</b>ramet
 
 # Project Publications
 	
-See the [PAVOQUE Publications page](pavoque-publications.html).
+See the [PAVOQUE Publications page](publications/pavoque-publications.html).
 
 # Abstract
 	
@@ -35,9 +35,9 @@ The work plan is structured into work packages (WPs). The core piece of the proj
 
 Figure 1 shows the logical interdependency between the work packages, as well as their key results.
 
-<div style="text-align:right;">
+<div style="text-align:left;">
   <a href="../../images/pavoque-pert.gif">
-    <img alt="Figure 1" src="../../images/pavoque-pert.gif" width="100%">
+    <img alt="Figure 1" src="../../images/pavoque-pert.gif" width="70%">
   </a>
 </div>
 Figure 1: Logical relationships between work packages and key results in PAVOQUE
@@ -56,9 +56,9 @@ In the final phase, we will fine-tune the selection and modification aspects of 
     
 Several work packages and tasks are scheduled to run in parallel – either because they are largely independent (as in the preparation phase), or because they are mutually dependent (as in the main phase). This interdependence of three tasks in the main phase bears the risk that a delay in one task could delay all other tasks. In order to reduce this risk, a step-wise procedure is used in all three tasks in the main phase (labelling – WP2c, selection – WP3a and modification – WP3b): Existing resources and algorithms are used in a first step, and replaced with newly developed ones as they become available.
  	
-<div style="text-align:right;">
+<div style="text-align:left;">
   <a href="../../images/pavoque-gantt.gif">
-    <img alt="Figure 1" src="../../images/pavoque-gantt.gif" width="100%">
+    <img alt="Figure 1" src="../../images/pavoque-gantt.gif" width="70%">
   </a>
 </div>
 Figure 2: Planned time course of work packages and key tasks in PAVOQUE
