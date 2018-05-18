@@ -30,6 +30,7 @@
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>faq.html">FAQ</a>
     <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>legal-information.html">Legal
         Information</a>
+    <a href="https://www.dfki.de/web/data-protection-en">Data Protection</a>
     <li class="dropdown-header">DEVELOPER DOCUMENTATION</li>
     <button class="dropdown-btn">Project Information
         <i class="fa fa-caret-down"></i>
