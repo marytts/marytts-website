@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jbake.site' version '1.0.0'
+    id 'org.jbake.site' version '1.2.0'
 }
 
 ext {
@@ -11,7 +11,7 @@ ext {
             "documentation/index.md"                               : "Documentation",
             "documentation/maryxml/index.md"                       : "MaryXML",
             "documentation/module-architecture.md"                 : "Architecture Walkthrough",
-            "documentation/publications/index.md"                  : "Publications",
+            "documentation/publications/index.md"                  : "MaryTTS Publications",
             "documentation/publications/mary-publications_bib.html": "Bib entries",
             "faq.md"                                               : "Frequently Asked Questions",
             "pavoque/index.md"                                     : "PAVOQUE Project",
@@ -123,6 +123,25 @@ task processAssets(type: Copy) {
 task processTemplates(type: Copy) {
     from 'src/site/templates'
     into "$buildDir/generatedContent/templates"
+}
+
+task bibtex2html(type:Exec) {
+    commandLine 'bibtex2html', 'src/site/resources/mary-publications.bib'
+    commandLine 'bibtex2html', 'src/site/resources/pavoque-publications.bib'
+}
+
+task copyBib {
+    dependsOn bibtex2html
+    copy {
+        from projectDir
+        include "mary-publications*.*"
+        into 'src/site/markdown/documentation/publications'
+    }
+    copy {
+        from projectDir
+        include "pavoque-publications*.*"
+        into 'src/site/markdown/pavoque/publications'
+    }
 }
 
 bake {

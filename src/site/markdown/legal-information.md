@@ -1,5 +1,5 @@
 
-# DFKI GmbH
+# [DFKI GmbH](https://www.dfki.de/web "DFKI Homepage")
 
 ## Postal Address:
 	
@@ -60,3 +60,5 @@ HRB 2313
 ### ID-Number: 
 		
 DE 148 646 973
+
+## [Data Protection](https://www.dfki.de/web/data-protection-en "DFKI's Data Protection Notice")
