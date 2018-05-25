@@ -145,7 +145,7 @@ task copyBib {
 }
 
 bake {
-    dependsOn processMarkdown, processAssets, processTemplates, bibtex2html, copyBib
+    dependsOn processMarkdown, processAssets, processTemplates
 }
 
 assemble {
