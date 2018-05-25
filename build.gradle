@@ -18,6 +18,7 @@ ext {
             "pavoque/publications/pavoque-publications.md"         : "PAVOQUE Publications",
             "pavoque/publications/pavoque-publications_bib.html"   : "Bib entries",
             "legal-information.md"                                 : "Legal Information",
+            "data-protection.md"                                   : "Data Protection",
             "download/index.md"                                    : "Download",
             "download/releasenotes-3.0.0.md"                       : "Release Notes",
             "download/releasenotes-3.0.1.md"                       : "Release Notes",
