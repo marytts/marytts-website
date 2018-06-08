@@ -1,0 +1,13 @@
+= Source Code Management
+
+TODO
+
+= Issue Management
+
+TODO
+
+= Project License
+
+Typically the licenses listed for the project are that of the project itself, and not of dependencies.
+
+=== *https://www.gnu.org/licenses/lgpl-3.0-standalone.html[GNU Lesser General Public License v3.0]*

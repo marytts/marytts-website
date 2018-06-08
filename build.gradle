@@ -4,22 +4,22 @@ plugins {
 
 ext {
     pageTitles = [
-            "index.md"                                             : "The MARY Text-to-Speech System (${project.name})",
-            "documentation/overview.md"                            : "Overview",
-            "documentation/tibetan.md"                             : "Tibetan",
-            "documentation/history.md"                             : "Project History",
-            "documentation/index.md"                               : "Documentation",
-            "documentation/maryxml/index.md"                       : "MaryXML",
-            "documentation/module-architecture.md"                 : "Architecture Walkthrough",
-            "documentation/publications/index.md"                  : "MaryTTS Publications",
+            "index.adoc"                                             : "The MARY Text-to-Speech System (${project.name})",
+            "documentation/overview.adoc"                            : "Overview",
+            "documentation/tibetan.adoc"                             : "Tibetan",
+            "documentation/history.adoc"                             : "Project History",
+            "documentation/index.adoc"                               : "Documentation",
+            "documentation/maryxml/index.adoc"                       : "MaryXML",
+            "documentation/module-architecture.adoc"                 : "Architecture Walkthrough",
+            "documentation/publications/index.adoc"                  : "MaryTTS Publications",
             "documentation/publications/mary-publications_bib.html": "Bib entries",
-            "faq.md"                                               : "Frequently Asked Questions",
-            "pavoque/index.md"                                     : "PAVOQUE Project",
-            "pavoque/publications/pavoque-publications.md"         : "PAVOQUE Publications",
+            "faq.adoc"                                               : "Frequently Asked Questions",
+            "pavoque/index.adoc"                                     : "PAVOQUE Project",
+            "pavoque/publications/pavoque-publications.adoc"         : "PAVOQUE Publications",
             "pavoque/publications/pavoque-publications_bib.html"   : "Bib entries",
-            "legal-information.md"                                 : "Legal Information",
-            "data-protection.md"                                   : "Data Protection",
-            "download/index.md"                                    : "Download",
+            "legal-information.adoc"                                 : "Legal Information",
+            "data-protection.adoc"                                   : "Data Protection",
+            "download/index.adoc"                                    : "Download",
             "download/releasenotes-3.0.0.md"                       : "Release Notes",
             "download/releasenotes-3.0.1.md"                       : "Release Notes",
             "download/releasenotes-3.0.2.md"                       : "Release Notes",
@@ -41,9 +41,9 @@ ext {
             "download/releasenotes-5.1.2.md"                       : "Release Notes",
             "download/releasenotes-5.1.md"                         : "Release Notes",
             "download/releasenotes-5.2.md"                         : "Release Notes",
-            "dev-doc/index.md"                                     : "Overview",
-            "dev-doc/mail-lists.md"                                : "Mailing Lists",
-            "dev-doc/team.md"                                      : "Team",
+            "dev-doc/index.adoc"                                     : "Overview",
+            "dev-doc/mail-lists.adoc"                                : "Mailing Lists",
+            "dev-doc/team.adoc"                                      : "Team",
             untitled                                               : 'No Title'
     ]
     maryVersions = ['5.1', '5.1.1', '5.1.2', '5.2']
@@ -76,19 +76,19 @@ task generatePageTitles(type: GeneratePageTitles) {
     destDir = file("$buildDir/generatedPageTitles")
 }
 
-task processMarkdown(type: Copy) {
+task processAdoc(type: Copy) {
     dependsOn generatePageTitles
     into "$buildDir/generatedContent/content"
-    from 'src/site/markdown', {
-        include '**/*.md', '**/*.html'
+    from 'src/site/adoc', {
+        include '**/*.adoc', '**/*.html', '**/*.md'
         eachFile {
             def headerFile = file("$generatePageTitles.destDir/${it.path}.txt")
             headerFile = headerFile.exists() ? headerFile : file("$generatePageTitles.destDir/untitled.txt")
             filter org.apache.tools.ant.filters.ConcatFilter, prepend: headerFile
         }
     }
-    from 'src/site/markdown', {
-        include '**/*.md.vm'
+    from 'src/site/adoc', {
+        include '**/*.adoc', '**/*.md.vm'
         rename { it - '.vm' }
         expand project.properties
         eachFile {
@@ -140,7 +140,7 @@ task copyBib {
 }
 
 bake {
-    dependsOn processMarkdown, processAssets, processTemplates
+    dependsOn processAdoc, processAssets, processTemplates
 }
 
 assemble {
@@ -154,8 +154,8 @@ class GeneratePageTitles extends DefaultTask {
 
     @TaskAction
     void generate() {
-        project.pageTitles.each { mdFile, title ->
-            def destPath = project.file("$destDir/$mdFile")
+        project.pageTitles.each { adocFile, title ->
+            def destPath = project.file("$destDir/$adocFile")
             destPath.parentFile.mkdirs()
             project.file("${destPath}.txt").withWriter { writer ->
                 writer.println "title=$title"
