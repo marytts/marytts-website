@@ -46,6 +46,7 @@
     </button>
     <div class="dropdown-container">
         <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.2/index.html">Javadoc v5.2</a>
+        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1/index.html">Javadoc v5.1</a>
     </div>
 </div>
 

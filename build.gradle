@@ -46,10 +46,11 @@ ext {
             "dev-doc/team.md"                                      : "Team",
             untitled                                               : 'No Title'
     ]
-    maryVersions = ['5.2']
+    maryVersions = ['5.1', '5.2']
 }
 
 repositories {
+    mavenLocal()
     ['cloudark', 'localhost'].each { host ->
         maven {
             url "http://$host:8081/artifactory/local/"
