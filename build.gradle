@@ -46,6 +46,7 @@ ext {
             "dev-doc/team.md"                                      : "Team",
             untitled                                               : 'No Title'
     ]
+    maryVersions = ['5.2']
 }
 
 repositories {
@@ -60,12 +61,10 @@ repositories {
     }
 }
 
-configurations {
-    javadoc
-}
 
-dependencies {
-    javadoc group: 'de.dfki.mary', name: 'marytts', version: '5.2', classifier: 'javadoc'
+maryVersions.each { maryVersion ->
+    configurations.create maryVersion
+    dependencies.add maryVersion, "de.dfki.mary:marytts:$maryVersion:javadoc"
 }
 
 jbake {
@@ -110,13 +109,15 @@ task processMarkdown(type: Copy) {
 task processAssets(type: Copy) {
     from 'src/site/assets'
     into "$buildDir/generatedContent/assets"
-    from configurations.javadoc, {
-        filesMatching '*.jar', { jarFileDetails ->
-            copy {
-                from zipTree(jarFileDetails.file)
-                into "$destinationDir/javadoc"
+    maryVersions.each { maryVersion ->
+        from configurations."$maryVersion", {
+            filesMatching '*.jar', { jarFileDetails ->
+                copy {
+                    from zipTree(jarFileDetails.file)
+                    into "$destinationDir/javadoc/$maryVersion"
+                }
+                jarFileDetails.exclude()
             }
-            jarFileDetails.exclude()
         }
     }
 }

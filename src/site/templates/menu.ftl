@@ -41,11 +41,11 @@
         <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/team.html">Team</a>
         <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/mail-lists.html">Mailing Lists</a>
     </div>
-    <button class="dropdown-btn">Generated Reports
+    <button class="dropdown-btn">API Documentation
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc">JavaDocs</a>
+        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.2/index.html">Javadoc v5.2</a>
     </div>
 </div>
 
