@@ -50,18 +50,10 @@ ext {
 }
 
 repositories {
-    mavenLocal()
-    ['cloudark', 'localhost'].each { host ->
-        maven {
-            url "http://$host:8081/artifactory/local/"
-            credentials {
-                username findProperty('cloudarkUser')
-                password findProperty('cloudarkApiKey')
-            }
-        }
+    maven {
+        url "https://oss.jfrog.org/artifactory/oss-release-local"
     }
 }
-
 
 maryVersions.each { maryVersion ->
     configurations.create maryVersion
