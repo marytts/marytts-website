@@ -1,4 +1,4 @@
-= Introduction
+== Introduction
 
 The MARY system uses an internal XML-based representation language called MaryXML. The purpose of an XML-based representation language is to serve as the data representation format inside a TTS system. For that reason, the concepts represented in it are low-level, detailed, and specific to the design decisions, modules, and scientific theories underlying the TTS system. By means of the Document Object Model (DOM), a standardised object-oriented representation of an XML document, the TTS system modules can operate directly on the XML document, interpreting and adding information.
 
@@ -10,14 +10,14 @@ The MaryXML syntax was designed to maintain a certain degree of readability for 
 
 The syntax of a correct MaryXML document is defined in the link:../../MaryXML.xsd[MaryXML schema file].
 
-= Examples
+== Examples
 
 MaryXML, when used as a rich input to a speech synthesis system, provides a powerful method for controlling the behaviour of the TTS system for the given input. It can be thought of as a "remote control" for the TTS system.
 The input data below is to be fed into the system as data of type RAWMARYXML, e.g. via the http://mary.dfki.de:59125[online demo].
 
 *Note:* These examples refer to MaryXML version 0.5, as it is used since MARY TTS 4.0. In previous versions, some attribute names were different, e.g. the attribute name "sampa" was used instead of the current "ph".
 
-== Overall prosodic settings
+=== Overall prosodic settings
 
 [source]
 ----
@@ -32,7 +32,7 @@ This is something you have to see!
 </maryxml>
 ----
 
-== Forcing location and/or type of ToBI accents and boundaries
+=== Forcing location and/or type of ToBI accents and boundaries
 
 [source]
 ----
@@ -47,7 +47,7 @@ Can you <boundary duration="100"/>
 </maryxml>
 ----
 
-== Marking individual words as English in German text
+=== Marking individual words as English in German text
 
 [source]
 ----
@@ -63,7 +63,7 @@ Klicken Sie den <t xml:lang="en">Button</t>, um die <t xml:lang="en">Beatles</t>
 
 (doesn't work in 4.3, see also http://mary.opendfki.de/ticket/394[ticket #394])
 
-== Force pronounciation of individual words
+=== Force pronounciation of individual words
 
 [source]
 ----
@@ -76,7 +76,7 @@ Klicken Sie den <t ph="'ba-t@n">Button</t>, um die <t ph="'bi:-t@ls">Beatles</t>
 </maryxml>
 ----
 
-== Force boundaries and question intonation
+=== Force boundaries and question intonation
 
 [source]
 ----
