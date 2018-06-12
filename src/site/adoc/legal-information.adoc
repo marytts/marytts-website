@@ -1,13 +1,13 @@
-= https://www.dfki.de/web[DFKI GmbH]
+== https://www.dfki.de/web[DFKI GmbH]
 
 == Postal Address:
 
-Postfach 20 80
+Postfach 20 80 +
 67608 Kaiserslautern
 
 === Kaiserslautern Site:
 
-Erwin-Schrödinger-Strasse (Building 57)
+Erwin-Schrödinger-Strasse (Building 57) +
 67663 Kaiserslautern
 
 Tel.: +49 (0)631 205-3211
@@ -16,7 +16,7 @@ Fax: +49 (0)631 205-3210
 
 === Saarbrücken Site:
 
-Stuhlsatzenhausweg 3 (Building 43)
+Stuhlsatzenhausweg 3 (Building 43) +
 66123 Saarbrücken
 
 Tel.: +49 (0)681 302-5151
