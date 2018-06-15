@@ -19,7 +19,7 @@ The input data below is to be fed into the system as data of type RAWMARYXML, e.
 
 === Overall prosodic settings
 
-[source]
+[source, xml]
 ----
 <?xml version="1.0" encoding="UTF-8" ?>
 <maryxml version="0.4"
@@ -34,7 +34,7 @@ This is something you have to see!
 
 === Forcing location and/or type of ToBI accents and boundaries
 
-[source]
+[source, xml]
 ----
 <?xml version="1.0" encoding="UTF-8" ?>
 <maryxml version="0.5"
@@ -49,7 +49,7 @@ Can you <boundary duration="100"/>
 
 === Marking individual words as English in German text
 
-[source]
+[source, xml]
 ----
 <?xml version="1.0" encoding="UTF-8" ?>
 <maryxml version="0.5"
@@ -65,7 +65,7 @@ Klicken Sie den <t xml:lang="en">Button</t>, um die <t xml:lang="en">Beatles</t>
 
 === Force pronounciation of individual words
 
-[source]
+[source, xml]
 ----
 <?xml version="1.0" encoding="UTF-8" ?>
 <maryxml version="0.5"
@@ -78,7 +78,7 @@ Klicken Sie den <t ph="'ba-t@n">Button</t>, um die <t ph="'bi:-t@ls">Beatles</t>
 
 === Force boundaries and question intonation
 
-[source]
+[source, xml]
 ----
 <?xml version="1.0" encoding="UTF-8" ?>
 <maryxml version="0.5"
