@@ -6,4 +6,4 @@ include::mary-publications.html[]
 For a number of publications on the use of the MARY system for the synthesis of emotional speech, see also:
 
 * link:../../pavoque/publications/pavoque-publications.html[PAVOQUE publications page]
-* http://www.dfki.de/~schroed/publications.html[Marc Schröder's publications page]
+* https://web.archive.org/web/20150706025013/http://www.dfki.de:80/~schroed/publications.html[Marc Schröder's publications page]
