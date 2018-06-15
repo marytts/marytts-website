@@ -1,0 +1,17 @@
+= MARY 3.0.3
+
+link:${project.url}/download/mary-install-3.0.3.jar[mary-install-3.0.3.jar] (web-based installer, 450kB) or use link:${project.url}/download/mary-standalone-install-3.0.3.jar[mary-standalone-install-3.0.3.jar] (standalone installer, 420MB) if the web-based installer causes problems
+
+== Release notes:
+
+Third bugfix release.
+Most relevant changes:
+
+* fixed standalone mode for running MARY (http://mary.opendfki.de/ticket/80[ticket 80])
+* improved control over prosody using ToBI tags (tickets http://mary.opendfki.de/ticket/59[59], http://mary.opendfki.de/ticket/60[60])
+* Several minor improvements of German synthesis (tickets http://mary.opendfki.de/ticket/44[44], http://mary.opendfki.de/ticket/49[49], http://mary.opendfki.de/ticket/57[57], http://mary.opendfki.de/ticket/78[78])
+* MBROLA to AUDIO conversion fixed (tickets http://mary.opendfki.de/ticket/54[54], http://mary.opendfki.de/ticket/55[55])
+
+An update is recommended only if you encountered one of these bugs.
+
+See also the http://mary.opendfki.de/query?milestone=3.0.3[full list of bugs fixed]
