@@ -5,11 +5,19 @@ The German Research Center for Artificial Intelligence (Deutsches Forschungszent
 == Controller
 
 Deutsches Forschungszentrum für Künstliche Intelligenz (DFKI)
-Phone: +49 (0)631 / 205 75-0, E-Mail: link:mailto:&#105;n&#102;&#x6f;&#x40;&#x64;&#x66;&#107;&#x69;&#x2e;d&#101;[&#105;n&#102;&#x6f;&#x40;&#x64;&#x66;&#107;&#x69;&#x2e;d&#101;], https://www.dfki.de/web/legal-info-en[Legal information]
+
+Phone: +49 (0)631 / 205 75-0
+
+E-Mail: link:mailto:&#105;n&#102;&#x6f;&#x40;&#x64;&#x66;&#107;&#x69;&#x2e;d&#101;[&#105;n&#102;&#x6f;&#x40;&#x64;&#x66;&#107;&#x69;&#x2e;d&#101;]
+
+https://www.dfki.de/web/legal-info-en[Legal information]
+
 
 == Data protection officer
 
-Phone: +49 (0)631 / 205 75-0, E-Mail: link:mailto:&#x64;&#97;t&#101;&#110;&#115;c&#104;u&#x74;&#122;&#x40;&#x64;&#102;&#107;i&#x2e;&#x64;e[&#x64;&#97;t&#101;&#110;&#115;c&#104;u&#x74;&#122;&#x40;&#x64;&#102;&#107;i&#x2e;&#x64;e]
+Phone: +49 (0)631 / 205 75-0
+
+E-Mail: link:mailto:&#x64;&#97;t&#101;&#110;&#115;c&#104;u&#x74;&#122;&#x40;&#x64;&#102;&#107;i&#x2e;&#x64;e[&#x64;&#97;t&#101;&#110;&#115;c&#104;u&#x74;&#122;&#x40;&#x64;&#102;&#107;i&#x2e;&#x64;e]
 
 == Purpose of processing
 
