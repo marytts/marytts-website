@@ -1,3 +1,8 @@
+= Tibetan
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 Some background on the Tibetan language synthesis within MARY
 
 = Information about this Tibetan text-to-speech synthesizer

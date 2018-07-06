@@ -1,4 +1,9 @@
-= MARY 3.1.0
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.1.0
 
 Ten months after the last stable release, a major milestone release is finally here:
 MARY 3.1.0.

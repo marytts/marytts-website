@@ -1,4 +1,9 @@
-= Data Protection Notice
+= Data Protection
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== Data Protection Notice
 
 The German Research Center for Artificial Intelligence (Deutsches Forschungszentrum für Künstliche Intelligenz – DFKI) and its staff are committed to goal- and risk-oriented information privacy and the fundamental right to the protection of personal data. In this data protection policy we inform you about the processing of your personal data when visiting and using our web site.
 

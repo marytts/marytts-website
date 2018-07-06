@@ -1,3 +1,8 @@
+= Project History
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 The earliest version of MaryTTS was developed around 2000 by Marc Schröder as a collaborative project of http://www.dfki.de/web[DFKI]'s http://www.dfki.de/lt/[Language Technology Lab] and the http://www.coli.uni-saarland.de/groups/WB/Phonetics/[Institute of Phonetics] at http://www.uni-saarland.de[Saarland University]. +
 For many years, it evolved and matured, first as an in-house Text-to-Speech (TTS) component, and subsequently as a fully open-source TTS platform with a growing community. +
 Since its origins, MaryTTS has changed significantly, but it remains true to its original goal: +

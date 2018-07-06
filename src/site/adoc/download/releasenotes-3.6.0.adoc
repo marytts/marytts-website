@@ -1,4 +1,9 @@
-= MARY 3.6.0
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.6.0
 
 This is a minor feature release, providing one important new feature and several bugfixes over previous MARY 3.5.0.
 

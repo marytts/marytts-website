@@ -1,4 +1,9 @@
-= MARY 3.5.0
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.5.0
 
 This release provides substantial new features while maintaining the API compatible to previous versions.
 

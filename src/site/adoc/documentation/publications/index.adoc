@@ -1,3 +1,7 @@
+= MaryTTS Publications
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
 
 ++++
 include::mary-publications.html[]

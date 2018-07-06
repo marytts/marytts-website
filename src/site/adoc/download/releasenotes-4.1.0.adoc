@@ -1,4 +1,9 @@
-= MARY TTS 4.1.0: Release notes
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY TTS 4.1.0: Release notes
 
 link:${project.url}/download/4.1.0/openmary-standalone-install-4.1.0.jar[Download MARY TTS 4.1.0]
 

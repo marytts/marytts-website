@@ -1,3 +1,9 @@
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARYTTS 5.2 Release Notes
 This is expected to be the last milestone release in the 5.x generation of MaryTTS.
 
 = New Features

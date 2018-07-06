@@ -1,4 +1,9 @@
-= MARY 3.1-beta2
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.1-beta2
 
 link:${project.url}/download/mary-install-3.1beta2.jar[mary-install-3.1beta2.jar] (web-based installer, 450kB)
 

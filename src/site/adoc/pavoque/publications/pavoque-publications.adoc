@@ -1,3 +1,7 @@
+= PAVOQUE Publications
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
 
 ++++
 include::pavoque-publications.html[]

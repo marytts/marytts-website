@@ -1,3 +1,8 @@
+= Overview
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 The properties of the MARY system are explained here along two lines: on the one hand, the architecture of the system from a natural language processing point of view; on the other hand, the workings of the system from a technical viewpoint .
 
 = Processing architecture and modules

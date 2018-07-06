@@ -1,3 +1,8 @@
+= Documentation
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 Start here if you want to understand what MARY is doing and how you can use it
 
 * link:overview.html[Overview]

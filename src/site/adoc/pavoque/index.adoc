@@ -1,3 +1,8 @@
+= PAVOQUE Project
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 == Overview
 
 Information regarding the DFG-funded research project PAVOQUE: +

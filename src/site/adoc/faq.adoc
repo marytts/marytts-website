@@ -1,3 +1,8 @@
+= Frequently Asked Questions
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 === General
 
 . <<Where does the name MARY come from?>>

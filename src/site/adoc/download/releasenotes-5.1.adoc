@@ -1,4 +1,9 @@
-= MaryTTS 5.1 Release Notes
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARYTTS 5.1 Release Notes
 
 Following significant restructuring introduced in v5.0, this is a milestone release to stabilize numerous new features and fixes over the past two years.
 

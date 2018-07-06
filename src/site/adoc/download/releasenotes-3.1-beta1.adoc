@@ -1,4 +1,9 @@
-= MARY 3.1-beta1
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.1-beta1
 
 link:${project.url}/download/mary-install-3.1beta1.jar[mary-install-3.1beta1.jar] (web-based installer, 450kB) or use link:${project.url}/download/mary-standalone-install-3.1beta1.jar[mary-standalone-install-3.1beta1.jar] (standalone installer, ~500MB) if the web-based installer causes problems
 

@@ -1,4 +1,9 @@
-= MaryTTS 5.0 Release Notes
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARYTTS 5.0 Release Notes
 
 MARY TTS 5.0 is the first release from the thoroughly restructured code base.
 

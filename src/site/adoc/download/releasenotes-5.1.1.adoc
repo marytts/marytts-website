@@ -1,4 +1,9 @@
-= MaryTTS 5.1.1 Release Notes
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARYTTS 5.1.1 Release Notes
 
 A milestone release that stabilizes changes in build and hosting infrastructure and fixes several issues.
 

@@ -1,4 +1,9 @@
-= MaryTTS 5.1.2 Release Notes
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARYTTS 5.1.2 Release Notes
 
 Another milestone release with several improvements and fixes.
 

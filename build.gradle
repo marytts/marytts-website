@@ -3,49 +3,6 @@ plugins {
 }
 
 ext {
-    pageTitles = [
-            "index.adoc"                                             : "The MARY Text-to-Speech System (${project.name})",
-            "documentation/overview.adoc"                            : "Overview",
-            "documentation/tibetan.adoc"                             : "Tibetan",
-            "documentation/history.adoc"                             : "Project History",
-            "documentation/index.adoc"                               : "Documentation",
-            "documentation/maryxml/index.adoc"                       : "MaryXML",
-            "documentation/module-architecture.adoc"                 : "Architecture Walkthrough",
-            "documentation/publications/index.adoc"                  : "MaryTTS Publications",
-            "documentation/publications/mary-publications_bib.html": "Bib entries",
-            "faq.adoc"                                               : "Frequently Asked Questions",
-            "pavoque/index.adoc"                                     : "PAVOQUE Project",
-            "pavoque/publications/pavoque-publications.adoc"         : "PAVOQUE Publications",
-            "pavoque/publications/pavoque-publications_bib.html"   : "Bib entries",
-            "legal-information.adoc"                                 : "Legal Information",
-            "data-protection.adoc"                                   : "Data Protection",
-            "download/index.adoc"                                    : "Download",
-            "download/releasenotes-3.0.0.adoc"                       : "Release Notes",
-            "download/releasenotes-3.0.1.adoc"                       : "Release Notes",
-            "download/releasenotes-3.0.2.adoc"                       : "Release Notes",
-            "download/releasenotes-3.0.3.adoc"                       : "Release Notes",
-            "download/releasenotes-3.1-beta1.adoc"                   : "Release Notes",
-            "download/releasenotes-3.1-beta2.adoc"                   : "Release Notes",
-            "download/releasenotes-3.1.0.adoc"                       : "Release Notes",
-            "download/releasenotes-3.5.0.adoc"                       : "Release Notes",
-            "download/releasenotes-3.6.0.adoc"                       : "Release Notes",
-            "download/releasenotes-4.0-beta.adoc"                    : "Release Notes",
-            "download/releasenotes-4.0.0.adoc"                       : "Release Notes",
-            "download/releasenotes-4.1.0.adoc"                       : "Release Notes",
-            "download/releasenotes-4.1.1.adoc"                       : "Release Notes",
-            "download/releasenotes-4.2.0.adoc"                       : "Release Notes",
-            "download/releasenotes-4.3.0.adoc"                       : "Release Notes",
-            "download/releasenotes-4.3.1.adoc"                       : "Release Notes",
-            "download/releasenotes-5.0.adoc"                         : "Release Notes",
-            "download/releasenotes-5.1.1.adoc"                       : "Release Notes",
-            "download/releasenotes-5.1.2.adoc"                       : "Release Notes",
-            "download/releasenotes-5.1.adoc"                         : "Release Notes",
-            "download/releasenotes-5.2.adoc"                         : "Release Notes",
-            "dev-doc/index.adoc"                                     : "Overview",
-            "dev-doc/mail-lists.adoc"                                : "Mailing Lists",
-            "dev-doc/team.adoc"                                      : "Team",
-            untitled                                               : 'No Title'
-    ]
     maryVersions = ['5.1', '5.1.1', '5.1.2', '5.2']
 }
 
@@ -69,32 +26,14 @@ jbake {
     configuration['render.sitemap'] = true
     configuration['render.feed'] = false
     configuration['render.archive'] = false
-    configuration['markdown.extensions'] = 'ALL'
-}
-
-task generatePageTitles(type: GeneratePageTitles) {
-    destDir = file("$buildDir/generatedPageTitles")
+//    configuration['markdown.extensions'] = 'ALL'
 }
 
 task processAdoc(type: Copy) {
-    dependsOn generatePageTitles
     into "$buildDir/generatedContent/content"
-    from 'src/site/adoc', {
-        include '**/*.adoc', '**/*.html'
-        eachFile {
-            def headerFile = file("$generatePageTitles.destDir/${it.path}.txt")
-            headerFile = headerFile.exists() ? headerFile : file("$generatePageTitles.destDir/untitled.txt")
-            filter org.apache.tools.ant.filters.ConcatFilter, prepend: headerFile
-        }
-    }
     from 'src/site/adoc', {
         include '**/*.adoc'
         expand project.properties
-        eachFile {
-            def headerFile = file("$generatePageTitles.destDir/${it.path}.txt")
-            headerFile = headerFile.exists() ? headerFile : file("$generatePageTitles.destDir/untitled.txt")
-            filter org.apache.tools.ant.filters.ConcatFilter, prepend: headerFile
-        }
     }
 }
 
@@ -146,22 +85,3 @@ assemble {
     dependsOn bake
 }
 
-class GeneratePageTitles extends DefaultTask {
-
-    @OutputDirectory
-    File destDir
-
-    @TaskAction
-    void generate() {
-        project.pageTitles.each { adocFile, title ->
-            def destPath = project.file("$destDir/$adocFile")
-            destPath.parentFile.mkdirs()
-            project.file("${destPath}.txt").withWriter { writer ->
-                writer.println "title=$title"
-                writer.println "type=page"
-                writer.println "status=published"
-                writer.println "~~~~~~"
-            }
-        }
-    }
-}

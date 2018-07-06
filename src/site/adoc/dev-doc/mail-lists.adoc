@@ -1,3 +1,8 @@
+= Mailing Lists
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 These are the mailing lists that have been established for this project. For each list, there is a subscribe, unsubscribe, and an archive link.
 
 [cols="<,^,<,^,<"]

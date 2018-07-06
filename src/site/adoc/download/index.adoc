@@ -1,3 +1,8 @@
+= Download
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
 To install and run MARY TTS, you will need a recent http://www.java.com/getjava[Java Runtime] installed (see below for version requirement).
 
 == MaryTTS 5.x

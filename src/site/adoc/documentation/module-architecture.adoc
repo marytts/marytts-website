@@ -1,3 +1,11 @@
+= Architecture Walkthrough
+Jonathan Bullock
+2013-10-17
+:jbake-type: page
+:jbake-tags: documentation, manual
+:jbake-status: published
+
+== Mary Architecture
 The following figure gives details of the processing architecture within MARY, exemplified according to the German system. The processing architecture for other languages is similar.
 
 :imagesdir: ${project.url}/images
