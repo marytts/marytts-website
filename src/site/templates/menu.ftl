@@ -1,71 +1,47 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<!-- Side navigation -->
-<div class="sidenav">
+
+<ul class="sidenav">
     <li class="dropdown-header">NAVIGATION</li>
-    <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">Introduction</a>
-    <a href="http://mary.dfki.de:59125">Online Demo</a>
-    <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>download/index.html">Download</a>
-    <button class="dropdown-btn">Documentation
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/index.html">Documentation</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/overview.html">Overview</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/history.html">History</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/maryxml/index.html">MaryXML</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/tibetan.html">Tibetan</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/publications/index.html">Publications</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/module-architecture.html">Architecture
-            Walkthrough</a>
-        <button class="dropdown-btn">PAVOQUE Project
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/index.html">PAVOQUE
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">Introduction</a></li>
+    <li><a href="http://mary.dfki.de:59125">Online Demo</a></li>
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>download/index.html">Download</a></li>
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/index.html">Documentation</a>
+        <ul>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/overview.html">Overview</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/history.html">History</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/maryxml/index.html">MaryXML</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/tibetan.html">Tibetan</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/publications/index.html">Publications</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>documentation/module-architecture.html">Architecture
+                Walkthrough</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/index.html">PAVOQUE
                 Project</a>
-            <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/publications/pavoque-publications.html">PAVOQUE Publications</a>
-        </div>
-    </div>
-    <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>faq.html">FAQ</a>
-    <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>legal-information.html">Legal
-        Information</a>
-    <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>data-protection.html">Data
-        Protection</a>
+                <ul>
+                    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>pavoque/publications/pavoque-publications.html">PAVOQUE Publications</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>faq.html">FAQ</a></li>
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>legal-information.html">Legal
+        Information</a></li>
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>data-protection.html">Data
+        Protection</a></li>
     <li class="dropdown-header">DEVELOPER DOCUMENTATION</li>
-    <button class="dropdown-btn">Project Information
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/index.html">Overview</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/team.html">Team</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/mail-lists.html">Mailing Lists</a>
-    </div>
-    <button class="dropdown-btn">API Documentation
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.2/index.html">Javadoc v5.2</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1.2/index.html">Javadoc v5.1.2</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1.1/index.html">Javadoc v5.1.1</a>
-        <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1/index.html">Javadoc v5.1</a>
-    </div>
-</div>
+    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/index.html">Project Information</a>
+        <ul>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/team.html">Team</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/mail-lists.html">Mailing Lists</a></li>
+        </ul>
+    </li>
+    <li><a href="#">API Documentation</a>
+        <ul>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.2/index.html">Javadoc v5.2</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1.2/index.html">Javadoc v5.1.2</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1.1/index.html">Javadoc v5.1.1</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>javadoc/5.1/index.html">Javadoc v5.1</a></li>
+        </ul>
+    </li>
+</ul>
 
-<script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-</script>

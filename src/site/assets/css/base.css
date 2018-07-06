@@ -44,6 +44,61 @@ body {
 /* Not required for template or sticky footer method. */
 /* sidenav */
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #d8d8da;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #d8d8da;
+}
+
+/* hide the submenus */
+li ul { display: none; }
+
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul li a:hover { background: #2c3e50; }
+
+/* display dropdown menu on hover */
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+li:hover a { background: #d8d8da; }
+
+li:hover li a:hover { background: #2c3e50; }
+
+.sidenav li ul li { border-top: 0; }
+
+/* display second level dropdown menus to the right of the first one */
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+ul:after { clear: both; }
+
 .sidenav {
   height: 100%;
   width: 260px;
@@ -82,18 +137,18 @@ body {
   padding: 0px 10px;
 }
 
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: #0099ff;
-  color: white;
-}
+/*!* Add an active class to the active dropdown button *!*/
+/*.active {*/
+  /*background-color: #0099ff;*/
+  /*color: white;*/
+/*}*/
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #d8d8da;
-  padding-left: 8px;
-}
+/*!* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content *!*/
+/*.dropdown-container {*/
+  /*display: none;*/
+  /*background-color: #d8d8da;*/
+  /*padding-left: 8px;*/
+/*}*/
 
 /* Optional: Style the caret down icon */
 .fa-caret-down {
