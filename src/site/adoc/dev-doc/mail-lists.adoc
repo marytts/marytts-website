@@ -1,0 +1,14 @@
+= Mailing Lists
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+These are the mailing lists that have been established for this project. For each list, there is a subscribe, unsubscribe, and an archive link.
+
+[cols="<,^,<,^,<"]
+|===
+|Name |Subscribe |Unsubscribe |Post |Archive 
+
+|mary-users |mailto:mary-users-request@dfki.de?subject=subscribe[Subscribe] |mailto:mary-users-request@dfki.de?subject=unsubscribe[Unsubscribe] |mailto:mary-users@dfki.de[Post] |http://www.dfki.de/pipermail/mary-users/[www.dfki.de]
+|mary-dev (archived) |Subscribe |Unsubscribe |/ |http://www.dfki.de/pipermail/mary-dev/[www.dfki.de] 
+|===

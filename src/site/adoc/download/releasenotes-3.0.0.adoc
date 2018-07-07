@@ -1,0 +1,14 @@
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.0.0
+
+link:${project.url}/download/mary-install-3.0.0.jar[mary-install-3.0.0.jar] (web-based installer, 450kB) or use link:${project.url}/download/mary-standalone-install-3.0.0.jar[mary-standalone-install-3.0.0.jar] (standalone installer, 420MB) if the web-based installer causes problems
+
+== Release Notes:
+
+This is the first open-source release.
+We have put in a lot of effort to test and debug it, but of course the system may have some teething problems.
+Please help us improve the system by submitting http://mary.opendfki.de/newticket[bug reports] on the http://mary.opendfki.de/[OpenMary development page].

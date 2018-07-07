@@ -1,0 +1,18 @@
+= Documentation
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+Start here if you want to understand what MARY is doing and how you can use it
+
+* link:overview.html[Overview]
+* link:history.html[History]
+* link:publications/index.html[Publications]
+* link:module-architecture.html[Architecture Walkthrough]
+* link:maryxml/index.html[MaryXML]
+* https://mary.opendfki.de/trac/[Development Wiki] +
+The place to find documentation on how to compile, develop, contribute to MARY
+* link:../javadoc/5.2[API Documentation for latest release] +
+API details for the MARY system Java implementation
+* link:tibetan.html[Tibetan] +
+Some background on the Tibetan language synthesis within MARY

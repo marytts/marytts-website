@@ -1,0 +1,22 @@
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY 3.0.2
+
+link:${project.url}/download/mary-install-3.0.2.jar[mary-install-3.0.2.jar] (web-based installer, 450kB) or use link:${project.url}/download/mary-standalone-install-3.0.2.jar[mary-standalone-install-3.0.2.jar] (standalone installer, 420MB) if the web-based installer causes problems
+
+== Release notes:
+
+Second bugfix release.
+A number of bugs have been fixed, including:
+
+* WAV audio can now (really) be saved with proper audio headers (http://mary.opendfki.de/ticket/38[ticket 38])
+* several bugs related to failing validation of intermediate processing results (due to an outdated MaryXML Schema) were fixed (tickets http://mary.opendfki.de/ticket/40[40], http://mary.opendfki.de/ticket/41[41], http://mary.opendfki.de/ticket/43[43])
+* Synthesizing APML was improved (tickets http://mary.opendfki.de/ticket/51[51], http://mary.opendfki.de/ticket/52[52])
+* Pronunciation for German compounds was improved (http://mary.opendfki.de/ticket/36[ticket 36])
+
+An update is recommended if you encountered one of these bugs.
+
+See also the http://mary.opendfki.de/query?status=closed&amp;milestone=3.0.2&amp;order=priority[full list of bugs fixed]

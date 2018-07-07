@@ -1,0 +1,22 @@
+= The MARY Text-to-Speech System (${project.name})
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+${project.name} is an open-source, multilingual Text-to-Speech Synthesis platform written in Java. +
+It was originally developed as a collaborative project of http://www.dfki.de/web[DFKI]'s http://www.dfki.de/lt/[Language Technology Lab] and the http://www.coli.uni-saarland.de/groups/WB/Phonetics/[Institute of Phonetics] at http://www.uni-saarland.de[Saarland University]. +
+It is now maintained by the http://m2ci.org/en/irg/msp[Multimodal Speech Processing] Group in the http://m2ci.org/[Cluster of Excellence MMCI] and DFKI.
+
+As of version 5.2, MaryTTS supports German, British and American English, French, Italian, Luxembourgish, Russian, Swedish, Telugu, and Turkish; more languages are in preparation. +
+${project.name} comes with toolkits for quickly https://github.com/marytts/marytts/wiki/New-Language-Support[adding support for new languages] and for building https://github.com/marytts/marytts/wiki/VoiceImportToolsTutorial[unit selection] and https://github.com/marytts/marytts/wiki/HMMVoiceCreation[HMM-based synthesis voices].
+
+== New to ${project.name}?
+
+First, check out the online demo:
+
+* link:${project.url}:59125[Speech synthesis interface] directly in your web browser
+
+Want to know more about this Modular Architecture for Research on speech sYnthesis (MARY)?
+
+* Browse the link:documentation/index.html[Documentation] section
+* Subscribe to the http://www.dfki.de/mailman/listinfo/mary-users[MARY users mailing list] and ask questions there

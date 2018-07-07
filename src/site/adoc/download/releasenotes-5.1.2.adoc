@@ -1,0 +1,36 @@
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARYTTS 5.1.2 Release Notes
+
+Another milestone release with several improvements and fixes.
+
+*Download:*
+
+* https://github.com/marytts/marytts/releases/download/v5.1.2/marytts-5.1.2.zip[Runtime package]
+* https://github.com/marytts/marytts/releases/download/v5.1.2/marytts-builder-5.1.2.zip[Builder package]
+
+= New Features
+
+== Improvements
+
+* For French, numbers in the input text were silently ignored; this has been https://github.com/marytts/marytts/issues/269[improved] using a _spellout formatter_ from http://icu-project.org/[ICU4J]. This fix can (and will soon) also be applied to other languages that are missing a text Preprocess module.
+* A new rule-based Syllabfier class has been implemented.
+* All releases are now https://github.com/marytts/marytts/releases[hosted on GitHub] again; references to the Downloads on Bitbucket have been updated accordingly.
+
+== Development news
+
+* Targets are cached so these do not get recreated, and can be re-used later.
+* Words are now added to wordlist in batches for new language components.
+* A toString() helper method was added to MaryData class to help with debugging.
+
+== Fixed Issues/Bugs
+
+* https://github.com/marytts/marytts/issues/268[#268]: getAllophone() no longer silently returns `null` on invalid input.
+* https://github.com/marytts/marytts/issues/267[#267]: `REALISED_DURATIONS` and `REALISED_ACOUSTPARAMS` are no longer (mistakenly) available as input types.
+* https://github.com/marytts/marytts/issues/266[#266]: Syllabification no longer ignores any provided stress diacritics.
+* https://github.com/marytts/marytts/issues/258[#258]: Byte overflow in TargetFeatureComputer – issue with limit of array.
+* https://github.com/marytts/marytts/issues/218[#218]: a voice would not be built correctly following the *groupId* change in v.5.1.1.
+* https://github.com/marytts/marytts/issues/154[#154]: trailing whitespace in config files could prevent correct parsing.

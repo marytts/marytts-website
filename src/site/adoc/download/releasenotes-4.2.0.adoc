@@ -1,0 +1,29 @@
+= Release Notes
+:jbake-type: page
+:jbake-status: published
+:jbake-cached: true
+
+== MARY TTS 4.2.0: Release notes
+
+link:${project.url}/download/4.2.0/openmary-standalone-install-4.2.0.jar[Download MARY TTS 4.2.0]
+
+This is a feature release, adding new features while maintaining compatibility with existing 4.x voices.
+
+This release marks the final results of work on MARY TTS in the http://www.semaine-project.eu/[SEMAINE project], where our main focus for TTS has been on building expressive British English voices with listener vocalization capabilities.
+
+== New features for synthesis of expressive vocalizations
+
+* Improved support for expressive vocalizations in the British English unit selection voices dfki-poppy, dfki-prudence, dfki-spike and dfki-obadiah.
+ Signal modification is now used to combine intonation contours and segmental forms, as described in http://www.dfki.de/lt/publication_show.php?id=4886[Pammi et al. (2010)].
+* Added vocalization support to the HMM-based versions of these voices:
+ dfki-poppy-hsmm, dfki-prudence-hsmm, dfki-spike-hsmm and dfki-obadiah-hsmm.
+
+For details on the new MaryXML `&lt;vocalization&gt;` tag and usage examples, see http://mary.opendfki.de/wiki/VocalizationSynthesis[VocalizationSynthesis].
+
+== New voice
+
+* For German, we created bits1-hsmm, a female HMM-based voice built from recordings provided by http://www.phonetik.uni-muenchen.de/Forschung/BITS/index.html[BITS].
+
+== Bugfixes
+
+* This release also includes a number of bugfixes, see http://mary.opendfki.de/query?status=closed&amp;group=resolution&amp;milestone=4.2[http://mary.opendfki.de/query?status=closed&amp;group=resolution&amp;milestone=4.2]
