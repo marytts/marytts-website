@@ -11,7 +11,7 @@ This is a very first system designed to convert written Tibetan text into speech
 
 The system is the result of a student project. None of the persons involved speak any Tibetan – we were therefore unable to determine if the system sounds understandable, does the right thing, etc. 
 
-We strongly invite link:mailto:schroed@dfki.de[feedback], but please be kind, and be constructive.
+We strongly invite mailto:schroed@dfki.de[feedback], but please be kind, and be constructive.
 
 === How to enter Tibetan text
 
@@ -49,7 +49,7 @@ Remember that we do not claim that this system is usable at this stage; furtherm
 === Who did you build this for?
 
 We built this system in the hope that it might become useful, e.g., in the http://www.braillewithoutborders.org/[Braille Without Borders] project in Lhasa. +
-The project is clearly non-commercial, and the resulting system is not to be sold. Organisations or institutions who wish to get a (royalty-free) license for the software should contact link:mailto:schroed@dfki.de[us].
+The project is clearly non-commercial, and the resulting system is not to be sold. Organisations or institutions who wish to get a (royalty-free) license for the software should contact mailto:schroed@dfki.de[us].
 
 === State of affairs, Limitations
 
@@ -57,7 +57,7 @@ We are very conscious of the fact that the system is crudely simplified in many 
 
 ==== Word segmentation
 
-A very crude mechanism for finding words consisting of more than one syllable is implemented, relying on a list of particles such as "la" or "gi", and a lexicon of words. Both the list of particles and the word list are mere proofs of concept, and contain only very few entries. Anyone who can give us access to more exhaustive word lists for Tibetan should contact link:schroed@dfki.de[us].
+A very crude mechanism for finding words consisting of more than one syllable is implemented, relying on a list of particles such as "la" or "gi", and a lexicon of words. Both the list of particles and the word list are mere proofs of concept, and contain only very few entries. Anyone who can give us access to more exhaustive word lists for Tibetan should contact mailto:schroed@dfki.de[us].
 
 ==== Numbers and other text normalisations
 

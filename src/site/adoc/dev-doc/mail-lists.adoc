@@ -9,6 +9,6 @@ These are the mailing lists that have been established for this project. For eac
 |===
 |Name |Subscribe |Unsubscribe |Post |Archive 
 
-|mary-users |link:mailto:mary-users-request@dfki.de?subject=subscribe[Subscribe] |link:mailto:mary-users-request@dfki.de?subject=unsubscribe[Unsubscribe] |link:mailto:mary-users@dfki.de[Post] |http://www.dfki.de/pipermail/mary-users/[www.dfki.de] 
+|mary-users |mailto:mary-users-request@dfki.de?subject=subscribe[Subscribe] |mailto:mary-users-request@dfki.de?subject=unsubscribe[Unsubscribe] |mailto:mary-users@dfki.de[Post] |http://www.dfki.de/pipermail/mary-users/[www.dfki.de]
 |mary-dev (archived) |Subscribe |Unsubscribe |/ |http://www.dfki.de/pipermail/mary-dev/[www.dfki.de] 
 |===
