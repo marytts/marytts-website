@@ -52,8 +52,8 @@ For example, if the prosody module does not get information from its input on th
 
 The tokeniser cuts the text into tokens, i.e. words and punctuation marks. +
 It uses a set of rules determined through corpus analysis to label the meaning of dots based on the surrounding context.
-Each token is enclosed by a &lt;«<t>…</t>{nbsp}»&gt; MaryXML tag. +
-All local information about a token determined by subsequent processing steps is added to that token's &lt;«<t>{nbsp}»&gt; tag as attribute/value pairs. In addition, the punctuation is used to determine start and end of sentences which are marked using the MaryXML &lt;«<s>…</s>{nbsp}»&gt; tag enclosing a sentence.
+Each token is enclosed by a `<t>...</t>` MaryXML tag. +
+All local information about a token determined by subsequent processing steps is added to that token's `<t>`; tag as attribute/value pairs. In addition, the punctuation is used to determine start and end of sentences which are marked using the MaryXML `<s>...</s>` tag enclosing a sentence.
 
 == Text normalisation module
 
@@ -86,7 +86,7 @@ For more information about the problems of text normalisation in German, see htt
 
 Part-of-speech tagging is performed with the statistical tagger http://www.coli.uni-sb.de/%7Ethorsten/tnt[TnT], using the http://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-table.html[Stuttgart-Tübingen Tagset (STTS)], and trained on the manually annotated http://www.coli.uni-saarland.de/projects/sfb378/negra-corpus/negra-corpus.html[NEGRA corpus]. +
 A http://www.coli.uni-saarland.de/publikationen/softcopies/Skut:1998:CTS.pdf[chunk parser] is used to determine the boundaries of noun phrases, prepositional phrases and adjective phrases.
-Part-of-speech and chunking information is added to each token's &lt;«< t >{nbsp}»&gt; tag. +
+Part-of-speech and chunking information is added to each token's `<t>` tag. +
 For the chunking information, this is not actually a very satisfactory solution, as the local syntactic structure can hardly be considered a property of the individual token.
 However, the more logical representation of syntactic structure as an XML tree structure would possibly conflict with the prosodic structure, due to the fact that syntactic and prosodic structure cannot be guaranteed to coincide in all cases. +
 As XML only allows for a proper tree structure, with no crossing edges, the only alternative seems to be to give up XML representation in the present form in favour of, e.g., a chart representation allowing more flexible edges. +

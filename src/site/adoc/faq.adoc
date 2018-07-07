@@ -57,7 +57,10 @@ Yes.
 Everything needed to run MaryTTS ("marytts-runtime") is licensed under the LGPL; this allows commercial use, modification, and redistribution.
 We do consider it appropriate to provide attribution by inserting a notice such as
 
-`Powered by &lt;a href=&quot;http://mary.dfki.de/&quot;&gt;MaryTTS&lt;/a&gt;`
+[source,html]
+----
+Powered by <a href="http://mary.dfki.de/">MaryTTS</a>
+----
 
 *However*, the voicebuilding and language building components ("marytts-builder") are licensed under the GPL; they rely on a number of GPL-licensed third-party libraries and tools. 
 

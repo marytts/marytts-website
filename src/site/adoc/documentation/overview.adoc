@@ -78,7 +78,7 @@ The output is a parameter file as used in one way or another by many speech synt
 As one type of waveform synthesizer, we use MBROLA as a synthesis system, so the parameter output format is the MBROLA input format. +
 Every phone symbol is assigned a duration in milliseconds; some phone symbols are assigned a (time,frequency) target, where time is in percent of the phone duration and frequency is in Hertz.
 
-Example: +....
+Example:
 ....
 _   10
 aI  130 (0,209)
