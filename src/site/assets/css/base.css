@@ -44,11 +44,6 @@ body {
 /* Not required for template or sticky footer method. */
 /* navigation */
 
-.navigation-header {
-  font-size: 11px;
-  font-family: "Lato", sans-serif;
-}
-
 .navigation {
   height: 100%;
   width: 260px;

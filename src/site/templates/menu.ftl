@@ -2,7 +2,6 @@
 
 <div class="navigation">
     <ul>
-        <li class="navigation-header">NAVIGATION</li>
         <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">Introduction</a></li>
         <li><a href="http://mary.dfki.de:59125">Online Demo</a></li>
         <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>download/index.html">Download</a></li>
@@ -28,8 +27,6 @@
             Information</a></li>
         <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>data-protection.html">Data
             Protection</a></li>
-        <li class="navigation-header">DEVELOPER DOCUMENTATION</li>
-
         <li class="has-sub"> <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/index.html">Project Information</a>
             <ul>
                 <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>dev-doc/team.html">Team</a></li>
