@@ -77,6 +77,10 @@ task copyBib {
     }
 }
 
+task createRedirectLinks(type: Exec) {
+    commandLine 'python', 'src/scripts/createRedirectLinks.py'
+}
+
 bake {
     dependsOn processAdoc, processAssets, processTemplates
 }
