@@ -40,6 +40,11 @@ with open(htaccessFile, "a") as f:
                     print(str(file))
                     repoName = re.sub('-5.*?\.zip', '', file)
                     gitHubURL = "https://github.com/marytts/"+ repoName + "/releases/download/v" + version + "/" + str(file)
+                elif file.startswith("mary-"):
+                    print(str(file))
+                    repoName = re.sub('-4.*?\.zip', '', file)
+                    repoName = re.sub('mary-', 'voice-', repoName)
+                    gitHubURL = "https://github.com/marytts/"+  repoName + "/releases/download/v" + version + "/" + str(file)
                 else:
                     gitHubURL = "https://github.com/marytts/marytts/releases/download/v" + version + "/" + str(file)
                 # if version != ("v"):
