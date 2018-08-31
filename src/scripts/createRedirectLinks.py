@@ -59,6 +59,7 @@ with open(htaccessFile, "a") as f:
                     print(file)
                     strippedPath = "/" + allDirs[3] + "/" + allDirs[4]
 
+                    file = re.sub('-', '_', file)
                 #      extract version number from file name
                 #     version = re.sub('\.pack\d+.jar', '', allDirs[4].lstrip("mary-install-"))
                     version = "3.6.0"
@@ -74,6 +75,7 @@ with open(htaccessFile, "a") as f:
                     print(file)
                     strippedPath = "/" + allDirs[3] + "/" + allDirs[4]
 
+                    file = re.sub('-', '_', file)
                     version = "3.6.0"
                     gitHubURL = "https://github.com/marytts/marytts/releases/download/v" + version + "/" + str(file)
 
