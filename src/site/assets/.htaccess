@@ -89,7 +89,6 @@ Redirect 307 "/download/voices/mbrola-de3-3.5.0.zip" "https://github.com/marytts
 Redirect 307 "/download/voices/english-bdl-arctic-3.5.0.zip" "https://github.com/marytts/english-bdl-arctic/releases/download/3.5.0/english-bdl-arctic-3.5.0.zip"
 Redirect 307 "/download/voices/german-hmm-bits1-3.5.0.zip" "https://github.com/marytts/german-hmm-bits1/releases/download/3.5.0/german-hmm-bits1-3.5.0.zip"
 Redirect 307 "/download/voices/mbrola-us1-3.5.0.zip" "https://github.com/marytts/mbrola-us1/releases/download/3.5.0/mbrola-us1-3.5.0.zip"
-Redirect 307 "/download/voices/voices-list.txt" "https://github.com/marytts/mbrola-us1/releases/download/3.5.0/mbrola-us1-3.5.0.zip"
 Redirect 307 "/download/voices/mbrola-de6-3.5.0.zip" "https://github.com/marytts/mbrola-de6/releases/download/3.5.0/mbrola-de6-3.5.0.zip"
 Redirect 307 "/download/voices/german-bits1-3.5.0.zip" "https://github.com/marytts/german-bits1/releases/download/3.5.0/german-bits1-3.5.0.zip"
 Redirect 307 "/download/voices/mbrola-de2-3.5.0.zip" "https://github.com/marytts/mbrola-de2/releases/download/3.5.0/mbrola-de2-3.5.0.zip"

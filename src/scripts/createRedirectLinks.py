@@ -21,7 +21,7 @@ with open(htaccessFile, "a") as f:
             allDirs = fullPath.split("/")
             # get version if available
             hasVersion = (len(allDirs) == 6)
-            if file.endswith((".xml", ".html")):
+            if file.endswith((".xml", ".html", ".txt")):
                 continue
             elif hasVersion:
                 version = allDirs[4]
