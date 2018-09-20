@@ -4,5 +4,5 @@
 :jbake-cached: true
 
 ++++
-include::pavoque-publications.html[]
+include::publications-pavoque.html[]
 ++++    

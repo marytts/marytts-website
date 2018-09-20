@@ -35,6 +35,9 @@ task processAdoc(type: Copy) {
         include '**/*.adoc'
         expand project.properties
     }
+    from 'src/site/adoc', {
+        include '**/*.html'
+    }
 }
 
 task processAssets(type: Copy) {
@@ -53,6 +56,13 @@ task processAssets(type: Copy) {
     }
 }
 
+task processResources(type: Copy) {
+    into "$buildDir/generatedContent/content/download"
+    from 'src/site/resources/download', {
+        include '**/*.html', '**/*.xml'
+    }
+}
+
 task processTemplates(type: Copy) {
     from 'src/site/templates'
     into "$buildDir/generatedContent/templates"
@@ -60,25 +70,25 @@ task processTemplates(type: Copy) {
 
 task bibtex2html(type:Exec) {
     commandLine 'bibtex2html', 'src/site/resources/mary-publications.bib'
-    commandLine 'bibtex2html', 'src/site/resources/pavoque-publications.bib'
+    commandLine 'bibtex2html', 'src/site/resources/publications-pavoque.bib'
 }
 
 task copyBib {
-    dependsOn bibtex2html
+//    dependsOn bibtex2html
     copy {
         from projectDir
         include "mary-publications*.*"
-        into 'src/site/markdown/documentation/publications'
+        into 'src/site/adoc/documentation/publications'
     }
     copy {
         from projectDir
         include "pavoque-publications*.*"
-        into 'src/site/markdown/pavoque/publications'
+        into 'src/site/adoc/pavoque/publications'
     }
 }
 
 bake {
-    dependsOn processAdoc, processAssets, processTemplates
+    dependsOn processAdoc, processAssets, processResources, processTemplates
 }
 
 assemble {
