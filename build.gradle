@@ -87,11 +87,6 @@ task copyBib {
     }
 }
 
-task createRedirectLinks(type: Exec) {
-//    presupposes that there is a python distribution installed
-    commandLine 'python', 'src/scripts/createRedirectLinks.py'
-}
-
 bake {
     dependsOn processAdoc, processAssets, processResources, processTemplates
 }
